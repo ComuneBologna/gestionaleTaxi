@@ -1,0 +1,92 @@
+<div class="flex-col flex-auto min-w-0 bg-card">
+    <div class="relative flex flex-col flex-0 items-center justify-between py-8 px-6 md:px-8 border-b shadow">
+        <!-- Title -->
+        <div class="text-4xl text-center text-accent font-extrabold tracking-tight">TAXI</div>
+
+    </div>
+    <div class="flex flex-col w-full max-w-screen-xl mx-auto my-16 text-5xl px-4">
+        <div class="justify-between flex flex-wrap w-full">
+            <a class="w-49-pc p-3 mb-6 flex-col flex bg-primary shadow-md rounded-2xl overflow-hidden justify-center items-center
+            transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100"
+            [routerLink]="['/licensees/taxi']">
+                <div class="flex flex-col items-center mt-2">
+                    <mat-icon class="icon-size-20 text-white" [svgIcon]="'fas:taxi'"></mat-icon>
+                    <div class="text-2xl font-extrabold text-white uppercase text-center">{{'licensee.licenseesTaxi' |
+                        translate}}</div>
+                </div>
+            </a>
+            <a class="w-49-pc p-3 mb-6 flex-col flex bg-primary shadow-md rounded-2xl overflow-hidden justify-center items-center
+            transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100"
+            [routerLink]="['/licensees/ncc']">
+                <div class="flex flex-col items-center mt-2">
+                    <mat-icon class="icon-size-20 text-white" [svgIcon]="'fas:taxi'"></mat-icon>
+                    <div class="text-2xl font-extrabold text-white uppercase text-center">{{'licensee.licenseesNcc' |
+                        translate}}</div>
+                </div>
+            </a>
+            <a class="w-49-pc p-3 mb-6 flex-col flex bg-card shadow-md rounded-2xl overflow-hidden justify-center items-center
+            transition  duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100"
+            [routerLink]="['/imports']">
+                <div class="flex flex-col items-center mt-2">
+                    <mat-icon class="icon-size-20 text-accent" [svgIcon]="'fas:upload'"></mat-icon>
+                    <div class="text-2xl font-extrabold text-accent uppercase text-center">{{'imports.imports' |
+                        translate}}</div>
+                </div>
+            </a>
+            <a class="w-49-pc p-3 mb-6 flex-col flex bg-card shadow-md rounded-2xl overflow-hidden justify-center items-center
+            transition  duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100"
+            [routerLink]="['/users']">
+                <div class="flex flex-col items-center mt-2">
+                    <mat-icon class="icon-size-20 text-accent" [svgIcon]="'fas:users'"></mat-icon>
+                    <div class="text-2xl font-extrabold text-accent uppercase text-center">{{'users.users' |
+                        translate}}</div>
+                </div>
+            </a>
+            <a class="w-19-pc p-3 mb-6 flex-col flex bg-accent shadow-md rounded-2xl overflow-hidden justify-center items-center
+            transition  duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100"
+            [routerLink]="['/configuration/people']">
+                <div class="flex flex-col items-center mt-2">
+                    <mat-icon class="icon-size-20 text-white" [svgIcon]="'fas:chevron-down'"></mat-icon>
+                    <div class="text-2xl font-extrabold text-white uppercase text-center">{{'common.anagraphic' |
+                        translate}}</div>
+                </div>
+            </a>
+            <a class="w-19-pc p-3 mb-6 flex-col flex bg-accent shadow-md rounded-2xl overflow-hidden justify-center items-center
+            transition  duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100"
+            [routerLink]="['/configuration/associations']">
+                <div class="flex flex-col items-center mt-2">
+                    <mat-icon class="icon-size-20 text-white" [svgIcon]="'fas:chevron-down'"></mat-icon>
+                    <div class="text-2xl font-extrabold text-white uppercase text-center">{{'common.associations' |
+                        translate}}</div>
+                </div>
+            </a>
+            <a class="w-19-pc p-3 mb-6 flex-col flex bg-accent shadow-md rounded-2xl overflow-hidden justify-center items-center
+            transition  duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100"
+            [routerLink]="['/configuration/shifts']">
+                <div class="flex flex-col items-center mt-2">
+                    <mat-icon class="icon-size-20 text-white" [svgIcon]="'fas:chevron-down'"></mat-icon>
+                    <div class="text-2xl font-extrabold text-white uppercase text-center">{{'common.shiftConfig' |
+                        translate}}</div>
+                </div>
+            </a>
+            <a class="w-19-pc p-3 mb-6 flex-col flex bg-accent shadow-md rounded-2xl overflow-hidden justify-center items-center
+            transition  duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100"
+            [routerLink]="['/configuration/issuing-offices']">
+                <div class="flex flex-col items-center mt-2">
+                    <mat-icon class="icon-size-20 text-white" [svgIcon]="'fas:chevron-down'"></mat-icon>
+                    <div class="text-2xl font-extrabold text-white uppercase text-center">{{'issuingOffice.issuingOffice' |
+                        translate}}</div>
+                </div>
+            </a>
+            <a class="w-19-pc p-3 mb-6 flex-col flex bg-accent shadow-md rounded-2xl overflow-hidden justify-center items-center
+            transition  duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100"
+            [routerLink]="['/configuration/templates']">
+                <div class="flex flex-col items-center mt-2">
+                    <mat-icon class="icon-size-20 text-white" [svgIcon]="'fas:chevron-down'"></mat-icon>
+                    <div class="text-2xl font-extrabold text-white uppercase text-center">{{'template.templateConfig' |
+                        translate}}</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

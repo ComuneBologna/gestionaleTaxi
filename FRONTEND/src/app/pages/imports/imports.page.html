@@ -1,0 +1,36 @@
+<page-content>
+    <ng-container header>
+        <div class="text-5xl">
+            {{'imports.imports' | translate}}
+        </div>
+        <button class="mt-2" mat-raised-button (click)="import()">
+            <span>{{'common.import' | translate}}</span>
+        </button>
+
+    </ng-container>
+    <ng-container content>
+        <filter-bar [expandable]="false">
+            <input-string [(ngModel)]="filters.description" label="common.description"
+                class="w-full md:w-49-pc lg:w-49-pc"></input-string>
+            <select-box [(ngModel)]="filters.status" label="imports.importStatus" [items]="statusItems"
+                class="w-full md:w-49-pc lg:w-24-pc"></select-box>
+            <input-date [(ngModel)]="filters.createdAtFrom" label="imports.createdAtFrom" [utc]="false"
+                class="w-full sm:w-49-pc lg:w-12-pc"></input-date>
+            <input-date [(ngModel)]="filters.createdAtTo" label="imports.createdAtTo" [utc]="false"
+                class="w-full sm:w-49-pc lg:w-12-pc"></input-date>
+
+            <ng-container buttons>
+                <button mat-raised-button color="accent" (click)="search()" class="w-full md:w-auto mr-5 mb-5 md:mb-0">
+                    <span>{{'common.search' | translate}}</span>
+                </button>
+                <button mat-raised-button (click)="reset()" class="w-full md:w-auto">
+                    <span>{{'common.clear' | translate}}</span>
+                </button>
+
+            </ng-container>
+        </filter-bar>
+
+        <data-table [columns]="tableColumns" [manager]="dataTableManager" [actions]="tableActions">
+        </data-table>
+    </ng-container>
+</page-content>

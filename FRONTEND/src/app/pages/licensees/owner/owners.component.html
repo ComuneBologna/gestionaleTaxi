@@ -1,0 +1,66 @@
+<div class="card">
+    <div class="flex justify-center align-items-center my-4">
+        <button mat-raised-button color="accent" (click)="manageOwner(true)" class="mr-12"
+            *ngIf="!showVariations"><span>{{'owner.addOwner' | translate}}</span></button>
+        <button mat-raised-button color="accent" (click)="showVariations=true" *ngIf="!showVariations"
+            [disabled]="variations.length==0">{{'common.viewVariation' | translate}}</button>
+        <button mat-raised-button color="accent" (click)="showVariations=false"
+            *ngIf="showVariations  && owner?.id">{{'common.viewActual'
+            | translate}}</button>
+    </div>
+    <div class="border rounded-lg p-4" *ngIf="!showVariations && owner">
+        <div class="flex flex-col">
+            <div class="flex flex-wrap w-full items-center">
+                <field-viewer class="w-full sm:w-70-pc md:w-80-pc mb-5" label="owner.owner">
+                    <p>{{owner?.extendedPersonDisplayName}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-29-pc md:w-19-pc mb-5" label="drivers.startShiftInHours">
+                    <p>{{owner?.shiftStarts}}</p>
+                </field-viewer>
+            </div>
+            <div class="flex flex-wrap w-full justify-start">
+                <div class="border rounded-lg p-4 w-full sm:w-47-pc md:w-31-pc lg:w-23-pc mb-6 mr-6 bg-gray-50"
+                    *ngFor="let document of owner.documents">
+                    <field-viewer [label]="document.type | enum:'DocumentTypes'">
+                        <p>{{document.number}}</p>
+                    </field-viewer>
+                    <field-viewer label="owner.documentReleasedBy">
+                        <p>{{document.releasedBy}}</p>
+                    </field-viewer>
+                    <field-viewer label="licensee.validityDate">
+                        <p>{{document?.validityDate | onlydate}}</p>
+                    </field-viewer>
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div>
+                    <div *ngIf="!owner?.allDocuments" class="flex items-center">
+                        <mat-icon svgIcon="fas:triangle-exclamation" class="text-warn mr-2">
+                        </mat-icon>
+                        <p class="text-warn">{{'licensee.documentInCompleted' | translate}}</p>
+                    </div>
+                </div>
+                <button mat-raised-button color="accent" (click)="manageOwner(false)">{{'common.edit' |
+                    translate}}</button>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="showVariations">
+        <div *ngFor="let variation of variations">
+            <div class="border bg-gray-100 w-full flex flex-wrap mb-4 p-4 rounded-lg ">
+                <field-viewer class="w-full sm:w-49-pc lg:w-24-pc mb-5 lg:mb-0" label="common.startDate">
+                    <p>{{variation.startDate | onlydate}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc lg:w-24-pc mb-5 lg:mb-0" label="common.note">
+                    {{variation.note}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc lg:w-24-pc mb-5 lg:mb-0" label="owner.owner">
+                    <p>{{variation.personDisplayName}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc lg:w-24-pc mb-5 lg:mb-0" label="drivers.startShiftInHours">
+                    {{variation.shiftStarts}}
+                </field-viewer>
+            </div>
+        </div>
+    </ng-container>
+</div>

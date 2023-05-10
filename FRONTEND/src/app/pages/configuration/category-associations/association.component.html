@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>
+    {{(isNew ? 'association.addAssociation' : 'association.editAssociation') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between" *ngIf="form">
+        <input-string formControlName="name" label="person.firstName" class="w-full"></input-string>
+        <input-string formControlName="fiscalCode" label="person.fiscalCode" class="w-full"></input-string>
+        <input-string formControlName="email" label="person.email" class="w-full"></input-string>
+        <input-int formControlName="telephoneNumber" label="person.phoneNumber" class="w-full">
+        </input-int>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>

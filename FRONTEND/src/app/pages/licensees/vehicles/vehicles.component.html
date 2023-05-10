@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="flex justify-center align-items-center my-4">
+        <button mat-raised-button color="accent" (click)="manageVehicle(true)" class="mr-12"
+            *ngIf="!showVariations"><span>{{'vehicle.addVehicle' | translate}}</span></button>
+        <button mat-raised-button color="accent" (click)="showVariations=true" *ngIf="!showVariations"
+            [disabled]="variations.length==0">{{'common.viewVariation' | translate}}</button>
+        <button mat-raised-button color="accent" (click)="showVariations=false"
+            *ngIf="showVariations">{{'common.viewActual'
+            | translate}}</button>
+    </div>
+    <div class="border rounded-lg p-4" *ngIf="!showVariations && vehicle">
+        <div class="flex flex-col">
+            <div class="flex flex-wrap w-full items-center">
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-19-pc mb-5" label="licensee.vehicleModel">
+                    <p>{{vehicle?.model}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-19-pc mb-5" label="licensee.vehicleLicensePlate">
+                    <p>{{vehicle?.licensePlate}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-19-pc mb-5" label="vehicle.registrationDate">
+                    <p>{{vehicle?.registrationDate | onlydate}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-19-pc mb-5" label="vehicle.inUseSince">
+                    <p>{{vehicle?.inUseSince | onlydate}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-66-pc lg:w-19-pc mb-5" label="vehicle.carFuelType">
+                    <p>{{vehicle?.carFuelType | enum:'CarFuelTypes'}}</p>
+                </field-viewer>
+            </div>
+            <div class="flex justify-end">
+                <button mat-raised-button color="accent" (click)="manageVehicle(false)">{{'common.edit' |
+                    translate}}</button>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="showVariations">
+        <div *ngFor="let variation of variations">
+            <div class="border bg-gray-100 w-full flex flex-wrap mb-4 p-4 rounded-lg ">
+                <field-viewer class="w-full sm:w-49-pc lg:w-33-pc mb-5" label="common.startDate">
+                    <p>{{variation.startDate | onlydate}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc lg:w-33-pc mb-5" label="common.note">
+                    {{variation.note}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc lg:w-33-pc mb-5" label="licensee.vehicleModel">
+                    <p>{{variation.model}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc lg:w-33-pc mb-5" label="licensee.vehicleLicensePlate">
+                    {{variation.licensePlate}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc lg:w-33-pc mb-5" label="vehicle.registrationDate">
+                    {{variation.registrationDate | onlydate}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc lg:w-33-pc mb-5" label="vehicle.inUseSince">
+                    {{variation.inUseSince | onlydate}}
+                </field-viewer>
+            </div>
+        </div>
+    </ng-container>
+</div>

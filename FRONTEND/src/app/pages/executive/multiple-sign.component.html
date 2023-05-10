@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>
+    {{'template.multipleSign' | translate}}
+</h1>
+<mat-dialog-content>
+    <div *ngIf="!items.any()" class="font-bold text-center"><em>{{'template.noSelected' | translate}}</em></div>
+    <mat-list *ngFor="let item of items" class="w-full">
+        <mat-list-item >
+            <div class="justify-between flex flex-wrap items-center py-16 w-full">
+                <span class="text-truncate w-70-pc">{{item.templateDescription}}</span>
+                <button mat-icon-button color="warn" class="w-5-pc" (click)="remove(item)">
+                    <mat-icon [svgIcon]="'fas:x'"></mat-icon>
+                </button>
+            </div>
+            <mat-divider [inset]="true"></mat-divider>
+        </mat-list-item>
+        <mat-divider [vertical]="true"></mat-divider>
+    </mat-list>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.close' | translate}}
+    </button>
+    <button mat-raised-button color="warn" (click)="deleteAll()" class="mr-4" *ngIf="items.any()">
+        {{'template.clearSelected' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="sign()" *ngIf="items.any()">
+        {{'template.sign' | translate}}
+    </button>
+</mat-dialog-actions>

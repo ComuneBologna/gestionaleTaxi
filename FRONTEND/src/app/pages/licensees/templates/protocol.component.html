@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>
+    {{(data.send ?  'template.send' : 'template.protocol') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between" *ngIf="form && !protocol">
+        <select-box class="w-full" formControlName="sender" label="template.sender" *ngIf="data.send" [items]="emailItems"></select-box>
+        <input-string class="w-full" formControlName="recipient" label="template.recipient" *ngIf="!data.send"></input-string>
+        <autocomplete formControlName="recipients" label="template.recipients" [actionItems]="actionItems" itemLabel="label"
+            [remote]="false" [items]="recipientsAutocompleteItems" [resetOnItemSelected]="true" (onSelectedItem)="onSelectedItem($event)" class="w-full" *ngIf="data.send">
+        </autocomplete>
+        <chips [items]="recipientsSelected" [removable]="true" (remove)="removeUser($event)" itemLabel="templateDescription" class="mb-2"></chips>
+        <!-- <tag-string formControlName="recipients" label="template.recipients" class="w-full" *ngIf="data.send" placeHolder="{{'email.enterEmail' | translate}}"></tag-string> -->
+        <input-string class="w-full" formControlName="subject" label="template.object"></input-string>
+        <input-string class="w-full" formControlName="text" label="template.text" [rows]="5" *ngIf="data.send"></input-string>
+    </form>
+    <div *ngIf="!data.send && protocol">
+        <div class="flex flex-wrap justify-between">
+            <div class="w-full py-2 pl-4">
+                <span class="font-semibold text-md uppercase pr-2">{{'template.protocolNumber' | translate}}:</span>
+                <span>{{protocol.numberProtocol}}</span>
+            </div>
+            <div class="w-full py-2 pl-4 justify-between">
+                <span class="font-semibold text-md uppercase pr-2">{{'template.protocolDate' | translate}}:</span>
+                <span>{{protocol.dateProtocolUTC | onlydate}}</span>
+            </div>
+            <div class="w-full py-2 pl-4 justify-between">
+                <span class="font-semibold text-md uppercase pr-2">{{'template.protocolYear' | translate}}:</span>
+                <span>{{protocol.yearProtocol}}</span>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()" *ngIf="!protocol">
+        <span *ngIf="!data.send">{{'template.protocol' | translate}}</span>
+        <span *ngIf="data.send">{{'template.send' | translate}}</span>
+    </button>
+</mat-dialog-actions>

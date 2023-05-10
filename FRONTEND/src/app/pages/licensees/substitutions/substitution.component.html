@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>
+    {{(data.id ? 'drivers.editDriverSubstitution' : 'drivers.addDriverSubstitution') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between items-center" *ngIf="form">
+        <input-date formControlName="startDate" label="drivers.substitutionStartDate" class="w-full md:w-49-pc"
+            [utc]="false"></input-date>
+        <input-date formControlName="endDate" label="drivers.substitutionEndDate" class="w-full md:w-49-pc"
+            [utc]="false"></input-date>
+        <autocomplete formControlName="substituteDriverId" label="person.selectPeople" [loader]="loadAutocompleteItems"
+            [actionItems]="actionItems" [initialItem]="initialAutocompleteItem" [minChars]="3" itemKey="id"
+            class="w-full"></autocomplete>
+        <input-string formControlName="note" label="common.note" class="w-full"></input-string>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>

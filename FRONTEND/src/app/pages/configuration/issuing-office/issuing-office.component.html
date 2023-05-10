@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>
+    {{(isNew ? 'issuingOffice.addIssuingOffice' : 'issuingOffice.editIssuingOffice') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" *ngIf="form">
+        <input-string formControlName="description" label="common.description" class="w-full"></input-string>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>

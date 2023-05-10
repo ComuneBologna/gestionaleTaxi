@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>
+    {{(isNew ? 'users.addUser' : 'users.editUser') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between" *ngIf="form">
+        <input-string class="w-full md:w-48-pc" formControlName="firstName" label="users.firstName"></input-string>
+        <input-string class="w-full md:w-48-pc" formControlName="lastName" label="users.lastName"></input-string>
+        <input-string class="w-full md:w-48-pc" formControlName="email" label="users.email"></input-string>
+        <input-string class="w-full md:w-48-pc" formControlName="phoneNumber" label="users.phoneNumber"></input-string>
+        <input-string class="w-full md:w-48-pc" formControlName="fiscalCode" label="users.fiscalCode"></input-string>
+        <select-box class="w-full md:w-48-pc" formControlName="permissionCode" [items]="roles" label="users.role">
+        </select-box>
+        <select-box class="w-full" formControlName="driverId" [items]="drivers" label="drivers.driver">
+        </select-box>
+        <input-slide class="w-full" formControlName="isEnabled" label="users.enabled" *ngIf="!isNew">
+        </input-slide>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>

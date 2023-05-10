@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>
+    {{'template.sign' | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between" *ngIf="form">
+        <input-string formControlName="username" label="template.username" class="w-full"></input-string>
+        <mat-form-field class="w-full">
+            <mat-label>Password</mat-label>
+            <input id="password" matInput type="password" [formControlName]="'password'" #passwordField>
+            <button mat-icon-button type="button"
+                (click)="passwordField.type === 'password' ? passwordField.type = 'text' : passwordField.type = 'password'" matSuffix>
+                <mat-icon class="icon-size-5" *ngIf="passwordField.type === 'password'" [svgIcon]="'fas:eye'"></mat-icon>
+                <mat-icon class="icon-size-5" *ngIf="passwordField.type === 'text'" [svgIcon]="'fas:eye-slash'"></mat-icon>
+            </button>
+            <mat-error> {{'common.requiredPassword' | translate}} </mat-error>
+        </mat-form-field>
+        <input-string formControlName="otp" label="template.otp" class="w-full" *ngIf="showOtp"></input-string>
+    </form>
+    <select-box [(ngModel)]="signType" label="template.signType" [items]="signTypeItems" class="w-full" *ngIf="showOtp"></select-box>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="getOtp()" *ngIf="!showOtp">
+        {{'template.getOpt' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()" *ngIf="showOtp">
+        {{'common.save' | translate}} 
+    </button>
+</mat-dialog-actions>

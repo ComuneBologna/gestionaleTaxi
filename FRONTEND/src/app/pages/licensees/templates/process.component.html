@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>
+    {{(data.isStarting ? 'template.startProcess' : 'template.stopProcess') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between" *ngIf="form">
+        <autocomplete [loader]="loadAutocompleteItems" formControlName="processTypeCode" label="template.processTypeCode"
+            [minChars]="2" class="w-full"></autocomplete>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>

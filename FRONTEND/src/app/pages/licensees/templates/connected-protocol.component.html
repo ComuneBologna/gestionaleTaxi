@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>
+    {{'template.connectedProtocolDocument' | translate}}
+</h1>
+<mat-dialog-content>
+    <div class="flex flex-wrap justify-between" *ngIf="!data.displayResult">
+        <div class="w-full py-2 pl-4">
+            <span class="font-semibold text-md uppercase pr-2">{{'template.protocolNumber' | translate}}:</span>
+            <span>{{connectedProtocol.number}}</span>
+        </div>
+        <div class="w-full py-2 pl-4 justify-between">
+            <span class="font-semibold text-md uppercase pr-2">{{'template.templateName' | translate}}:</span>
+            <span>{{connectedProtocol.leadDocumentName}}</span>
+        </div>
+        <div class="w-full py-2 pl-4 justify-between">
+            <span class="font-semibold text-md uppercase pr-2">{{'template.protocolYear' | translate}}:</span>
+            <span>{{connectedProtocol.year}}</span>
+        </div>
+    </div>
+    <div class="flex flex-wrap justify-between" *ngIf="data.displayResult">
+        <p>{{displayResult}}</p>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.close' | translate}}
+    </button>
+</mat-dialog-actions>

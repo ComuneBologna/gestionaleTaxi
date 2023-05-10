@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>
+    {{'email.addEmail' | translate}}
+</h1>
+<mat-dialog-content>
+    <div class="flex flex-wrap justify-between">
+        <input-string [(ngModel)]="mail" label="email.addEmail"  class="w-full"></input-string>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>

@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>
+    {{ (isNew ? "email.addEmail" : "email.editEmail") | translate }}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between" *ngIf="form">
+        <input-string formControlName="email" label="users.email" class="w-full">
+        </input-string>
+        <input-string formControlName="description" label="common.description" class="w-full">
+        </input-string>
+        <input-slide class="w-full" formControlName="active" label="users.enabled" *ngIf="!isNew">
+        </input-slide>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{ "common.undo" | translate }}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{ "common.save" | translate }}
+    </button>
+</mat-dialog-actions>

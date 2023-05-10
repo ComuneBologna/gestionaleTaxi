@@ -1,0 +1,26 @@
+<page-content>
+    <ng-container header>
+        <div class="text-5xl">
+            {{'template.templatesExecutive' | translate}}
+        </div>
+    </ng-container>
+    <ng-container content>
+        <filter-bar [expandable]="false">
+            <input-string [(ngModel)]="filters.description" label="common.description" class="w-full"></input-string>
+            <ng-container buttons>
+                <button mat-raised-button color="accent" (click)="search()" class="w-full md:w-auto mr-5 mb-5 md:mb-0">
+                    <span>{{'common.search' | translate}}</span>
+                </button>
+                <button mat-raised-button (click)="clearFilters()" class="w-full md:w-auto mr-5">
+                    <span>{{'common.clear' | translate}}</span>
+                </button>
+                <button mat-raised-button (click)="selected()" class="primary" *ngIf="canManage">
+                    <span>{{'template.sign' | translate}}</span>
+                </button>
+            </ng-container>
+        </filter-bar>
+
+        <data-table [columns]="tableColumns" [manager]="dataTableManager" [actions]="tableActions">
+        </data-table>
+    </ng-container>
+</page-content>

@@ -1,0 +1,99 @@
+<div class="card">
+    <div class="flex justify-center align-items-center my-4">
+        <button mat-raised-button color="accent" (click)="manageLicensee(true)" class="mr-12"
+            *ngIf="!showVariations"><span>{{'common.variation' | translate}}</span></button>
+        <button mat-raised-button color="accent" (click)="showVariations=true" *ngIf="!showVariations"
+            [disabled]="variations.length==0">{{'common.viewVariation' | translate}}</button>
+        <button mat-raised-button color="accent" (click)="showVariations=false"
+            *ngIf="showVariations">{{'common.viewActual'
+            | translate}}</button>
+    </div>
+    <div class="border rounded-lg p-4">
+        <div class="flex flex-col" *ngIf="!showVariations">
+            <div class="flex flex-wrap w-full">
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.number">
+                    <p>{{licensee?.number}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.state">
+                    <p>{{licensee?.status | enum:'LicenseeStateTypes'}}</p>
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.releaseDate">
+                    {{licensee?.releaseDate | onlydate}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.endDate">
+                    {{licensee?.endDate | onlydate}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.carGarage">
+                    {{licensee?.garageAddress}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.releasedBy">
+                    {{licensee?.licenseesIssuingOfficeDescription}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5"
+                    label="licensee.categoryAssociationName">
+                    {{licensee?.taxiDriverAssociationName}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="common.acronym">
+                    {{licensee?.acronym}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="drivers.familiaryShift">
+                    {{(licensee?.isFamilyCollaboration ? 'common.yes' : 'common.no') | translate}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="economicManagement.economicManagement">
+                    {{(licensee?.isFinancialAdministration ? 'common.yes' : 'common.no') | translate}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.expireActivityCause">
+                    {{licensee?.activityExpiredOnCause}}
+                </field-viewer>
+                <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="common.note">
+                    {{licensee?.note}}
+                </field-viewer>
+            </div>
+            <div class="flex justify-end">
+                <button mat-raised-button color="accent" (click)="manageLicensee(false)">{{'common.edit' |
+                    translate}}</button>
+            </div>
+        </div>
+        <ng-container *ngIf="showVariations">
+            <div *ngFor="let variation of variations">
+                <div class="border bg-gray-100 w-full flex flex-wrap mb-4 p-4 rounded-lg ">
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5 lg:mb-0" label="common.startDate">
+                        <p>{{variation.date | onlydate}}</p>
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5 lg:mb-0" label="common.note">
+                        {{variation.note}}
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5 lg:mb-0" label="licensee.state">
+                        <p>{{variation.status | enum:'LicenseeStateTypes'}}</p>
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5 lg:mb-0"
+                        label="licensee.categoryAssociationName">
+                        {{variation.taxiDriverAssociationName}}
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.releaseDate">
+                        {{variation?.releaseDate | onlydate}}
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="common.acronym">
+                        {{variation?.acronym}}
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.carGarage">
+                        {{variation?.garageAddress}}
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="economicManagement.economicManagement">
+                        {{variation?.isFinancialAdministration ?'common.yes':'common.no' | translate}}
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="drivers.familiaryShift">
+                        {{(variation?.isFamilyCollaboration ?'common.yes':'common.no') | translate}}
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="licensee.expireActivityCause">
+                        {{variation?.activityExpiredOnCause}}
+                    </field-viewer>
+                    <field-viewer class="w-full sm:w-49-pc md:w-33-pc lg:w-24-pc mb-5" label="common.annotations">
+                        {{variation?.licenseeNote}}
+                    </field-viewer>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+
+</div>

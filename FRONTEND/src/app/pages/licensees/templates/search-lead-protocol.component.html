@@ -1,0 +1,74 @@
+<h1 mat-dialog-title>
+    {{'template.searchLeadProtocol' | translate}}
+</h1>
+<mat-dialog-content>
+    <filter-bar [expandable]="false" *ngIf="!loaded">
+        <input-string [(ngModel)]="filters.title" label="common.title" class="w-24-pc">
+        </input-string>
+        <input-int [(ngModel)]="filters.protocolYear" label="template.protocolYear" class="w-24-pc">
+        </input-int>
+        <input-int [(ngModel)]="filters.protocolNumber" label="template.protocolNumber" class="w-24-pc">
+        </input-int>
+        <select-box [(ngModel)]="filters.type" label="common.type" class="w-24-pc" [items]="consoleTypeItems" [showPlaceHolder]="false">
+        </select-box>
+        <ng-container buttons>
+            <button mat-raised-button color="accent" (click)="search()" class="w-full md:w-auto mr-5 mb-5 md:mb-0">
+                <span>{{'common.search' | translate}}</span>
+            </button>
+            <button mat-raised-button (click)="clearFilters()" class="w-full md:w-auto">
+                <span>{{'common.clear' | translate}}</span>
+            </button>
+        </ng-container>
+    </filter-bar>
+    <div class="w-full flex flex-wrap justify-between items-start" *ngIf="!loaded">
+        <div class="w-full">
+            <data-table [columns]="tableColumns" [manager]="dataTableManager" (rowClick)="rowClick($event)">
+            </data-table>
+        </div>
+    </div>
+    <div class="w-full" *ngIf="listDocument && loaded">
+        <div class="mb-4 items-start">
+            <button mat-icon-button class="mr-2 mt-2" (click)="loadList()">
+                <mat-icon [svgIcon]="'fas:arrow-left'"></mat-icon>
+            </button>
+            <span class="font-semibold text-lg">{{documentName}}</span>
+        </div>
+        <mat-list *ngFor="let document of listDocument" class="w-full">
+            <mat-list-item class="w-full">
+                <div class="flex flex-wrap justify-between w-90-pc">
+                    <div class="flex w-full">
+                        <div class="rounded text-sm font-semibold items-center bg-black text-white mb-2 mr-4"
+                        [class.bg-red-600]="document.extension === 'pdf'"
+                        [class.bg-blue-600]="document.extension === 'doc'"
+                        [class.bg-blue-600]="document.extension === 'docx'"
+                        [class.bg-green-600]="document.extension === 'xls'"
+                        [class.bg-green-600]="document.extension === 'xlsx'"
+                        [class.bg-green-600]="document.extension === 'csv'"
+                        [class.bg-gray-600]="document.extension === 'txt'"
+                        [class.bg-amber-600]="document.extension === 'jpg'">
+                        {{document.extension.toUpperCase()}}
+                        </div>
+                        <span class="text-md mb-2 uppercase">{{document.name}}</span>
+                    </div>
+                    <div class="w-full mb-2 flex-row justify-between" *ngIf="document.protocolNumber && document.protocolDate && document.protocolType">
+                        <span class="text-md font-semibold mr-2">{{'template.protocolNumber' | translate}}</span>
+                        <span class="mr-2 text-md">{{document.protocolNumber}}</span>
+                        <span class="text-md font-semibold">{{'template.protocolDate' | translate}}: </span><span class="mr-2 text-md">{{document.protocolDate | onlydate: 'dd/MM/yyyy'}}</span>
+                        <span class="text-md font-semibold">{{'common.type' | translate}}: </span><span class="mr-2 text-md">{{document.protocolType | enum:'ProxyProtocolDirections'}}</span>
+                    </div>
+                </div>
+                <div class="justify-between w-10-pc mb-2" *ngIf="document.protocolNumber">
+                    <button mat-raised-button (click)="connectDocument(document)">
+                        {{'template.connect' | translate}}
+                    </button>
+                </div>
+            </mat-list-item>
+            <mat-divider class="m-2"></mat-divider>
+        </mat-list>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+</mat-dialog-actions>

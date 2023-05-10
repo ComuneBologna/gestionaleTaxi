@@ -1,0 +1,82 @@
+<page-content>
+    <ng-container header>
+        <div class="text-5xl">
+            <button mat-icon-button class="mr-0 mr-sm-16" goBack="/licensees">
+                <mat-icon class="text-on-primary" svgIcon="fas:arrow-left"></mat-icon>
+            </button>
+            {{(isTaxi ? 'licensee.licenseeTaxi' : 'licensee.licenseeNcc') |
+            translate}} n°
+            {{licensee?.number}}
+        </div>
+        <button class="mt-2" mat-raised-button (click)="addRequest()">
+            <span>{{'requests.addRequest' | translate}}</span>
+        </button>
+
+    </ng-container>
+    <ng-container content *ngIf="licensee">
+        <mat-accordion multi>
+            <mat-expansion-panel [expanded]="true">
+                <mat-expansion-panel-header>
+                    <mat-panel-title><span class="font-bold text-lg">{{'common.detail' | translate}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <taxi-details [(licensee)]="licensee" *ngIf="isTaxi"></taxi-details>
+                <ncc-details [(licensee)]="licensee" *ngIf="!isTaxi"></ncc-details>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title><span class="font-bold text-lg">{{'owner.owner' | translate}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-template matExpansionPanelContent>
+                    <owners [licensee]="licensee"></owners>
+                </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title><span class="font-bold text-lg">{{'vehicle.vehicle' | translate}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-template matExpansionPanelContent>
+                    <vehicles [licensee]="licensee"></vehicles>
+                </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel *ngIf="licensee.isFamilyCollaboration">
+                <mat-expansion-panel-header>
+                    <mat-panel-title><span class="font-bold text-lg">{{'drivers.familiaryShift' | translate}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-template matExpansionPanelContent>
+                    <collaborators [licensee]="licensee"></collaborators>
+                </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel *ngIf="isTaxi">
+                <mat-expansion-panel-header>
+                    <mat-panel-title><span class="font-bold text-lg">{{'common.substitutions' | translate}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-template matExpansionPanelContent>
+                    <substitutions [licensee]="licensee"></substitutions>
+                </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel *ngIf="!isTaxi && licensee.isFinancialAdministration">
+                <mat-expansion-panel-header>
+                    <mat-panel-title><span class="font-bold text-lg">{{'economicManagement.economicManagement' |
+                            translate}}</span></mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-template matExpansionPanelContent>
+                    <financial-administrations [licensee]="licensee"></financial-administrations>
+                </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title><span class="font-bold text-lg">{{'common.documents' | translate}}</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-template matExpansionPanelContent>
+                    <templates [licensee]="licensee"></templates>
+                </ng-template>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </ng-container>
+</page-content>

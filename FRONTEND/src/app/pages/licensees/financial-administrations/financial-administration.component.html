@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>
+    {{(isEdit ? 'economicManagement.edit' : 'economicManagement.add') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between items-center" *ngIf="form">
+        <!-- <input-string formControlName="financialAdministrationCompany"
+            label="economicManagement.financialAdministrationCompany" class="w-full sm:w-49-pc"></input-string>
+        <input-string formControlName="financialAdministrationVatNumber" label="person.vatNumber"
+            class="w-full sm:w-49-pc"></input-string> -->
+        <autocomplete formControlName="legalPersonId" label="economicManagement.financialAdministrationCompany" [initialItem]="initialAutocompleteItem"
+            [loader]="loadAutocompleteLegalItems" [actionItems]="actionLegalItems" [minChars]="3" itemLabel="displayName" class="w-full">
+        </autocomplete>
+        <autocomplete (onSelectedItem)="onSelectedItem($event)" label="person.selectPeople"
+            [loader]="loadAutocompleteItems" [actionItems]="actionItems" [minChars]="3" itemLabel="displayName"
+            [resetOnItemSelected]="true" class="w-full">
+        </autocomplete>
+        <chips [items]="drivers" [removable]="true" (remove)="removeUser($event)" itemLabel="displayName"></chips>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>

@@ -1,0 +1,7 @@
+<div class="card">
+    <div class="flex justify-center align-items-center my-4">
+        <button mat-raised-button color="accent" (click)="addSubstitution()"><span>{{'common.add' |
+                translate}}</span></button>
+    </div>
+    <list-table [columns]="tableColumns" [manager]="tableManager" [actions]="tableActions"></list-table>
+</div>

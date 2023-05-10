@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>
+    {{(data.isEdit ? 'vehicle.editVehicle' : 'vehicle.addVehicle') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between items-center" *ngIf="form">
+        <input-string formControlName="model" label="licensee.vehicleModel" class="w-full md:w-33-pc">
+        </input-string>
+        <input-string formControlName="licensePlate" label="licensee.vehicleLicensePlate" class="w-full md:w-33-pc">
+        </input-string>
+        <select-box formControlName="carFuelType" label="vehicle.carFuelType" [items]="carFuelTypeItems"
+            class="w-full md:w-33-pc"></select-box>
+        <input-date formControlName="registrationDate" label="vehicle.registrationDate" [utc]="false"
+            class="w-full md:w-49-pc">
+        </input-date>
+        <input-date formControlName="inUseSince" label="vehicle.inUseSince" [utc]="false" class="w-full md:w-49-pc">
+        </input-date>
+        <input-string formControlName="note" label="common.note" class="w-full" *ngIf="showNote">
+        </input-string>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>

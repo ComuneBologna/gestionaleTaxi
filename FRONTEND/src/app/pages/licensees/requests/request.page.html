@@ -1,0 +1,77 @@
+<page-content-scroll breakpoint="lg">
+    <ng-container header>
+        <div class="text-5xl">
+            <button mat-icon-button class="mr-0 mr-sm-16" [goBack]="goBackUrl">
+                <mat-icon class="text-on-primary" svgIcon="fas:arrow-left"></mat-icon>
+            </button>
+            {{(isTaxi ? 'licensee.licenseeTaxi' : 'licensee.licenseeNcc') |
+            translate}} n°
+            {{licensee?.number}}
+        </div>
+    </ng-container>
+    <ng-container content *ngIf="licensee">
+        <div class="flex flex-col md:h-full p-6">
+            <div class="flex flex-auto">
+
+                <div class="flex flex-wrap justify-between">
+                    <div class="w-full lg:w-49-pc bg-card p-6">
+                        <form [formGroup]="form" class="w-full flex flex-wrap justify-between" *ngIf="form">
+                            <autocomplete label="template.selectDocument" [items]="templates" itemLabel="description"
+                                [remote]="false" (onSelectedItem)="selectTemplate($event)" class="w-full">
+                            </autocomplete>
+
+                            <input-string formControlName="protocolNumber" label="requests.pgNumber"
+                                class="w-full sm:w-49-pc md:w-24-pc"></input-string>
+                            <input-date formControlName="protocolDate" label="requests.pgDate" [utc]="false"
+                                class="w-full sm:w-49-pc md:w-24-pc"></input-date>
+                            <input-date formControlName="date" label="common.date" [utc]="false"
+                                class="w-full sm:w-49-pc md:w-24-pc"></input-date>
+                            <input-string formControlName="year" label="licensee.year"
+                                class="w-full sm:w-49-pc md:w-24-pc">
+                            </input-string>
+                            <input-string formControlName="months" label="licensee.numberOfMonths"
+                                class="w-full sm:w-49-pc md:w-24-pc"></input-string>
+                            <input-date formControlName="dateFrom" label="requests.fromDate" [utc]="false"
+                                class="w-full sm:w-49-pc md:w-24-pc"></input-date>
+                            <input-date formControlName="dateTo" label="requests.toDate" [utc]="false"
+                                class="w-full sm:w-49-pc md:w-24-pc"></input-date>
+                            <input-string formControlName="collaboratorRelationship" label="requests.relationship"
+                                class="w-full sm:w-49-pc md:w-24-pc"></input-string>
+                            <input-string formControlName="day" label="template.day" class="w-full md:w-24-pc">
+                            </input-string>
+                            <input-string formControlName="note" label="common.note"
+                                class="w-full sm:w-49-pc md:w-75-pc">
+                            </input-string>
+                            <input-string formControlName="freeText" label="common.freeText" [rows]="2" class="w-full">
+                            </input-string>
+                            <input-string formControlName="internalProtocol" label="template.internalProtocol"
+                                class="w-full mt-4"></input-string>
+                        </form>
+                        <div class="flex justify-between" *ngIf="currentTemplate != null">
+                            <button mat-raised-button color="accent" (click)="preview()">{{'template.preview' |
+                                translate}}</button>
+                            <upload-file (onFileSelected)="upload($event)">
+                                <button mat-raised-button color="accent">{{'template.upload' |
+                                    translate}}</button>
+                            </upload-file>
+                            <!-- <button mat-raised-button color="accent" (click)="printAndSave()">{{'template.save'
+                                |
+                                translate}}</button> -->
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-49-pc bg-card">
+                        <iframe class="w-full h-full" [src]="previewImageUrl" *ngIf="previewImageUrl != null">
+                        </iframe>
+                        <div class="flex justify-center items-center h-full" *ngIf="previewImageUrl == null">
+                            <div class="w-64 h-64">
+                                <img src="./assets/images/word.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </ng-container>
+</page-content-scroll>

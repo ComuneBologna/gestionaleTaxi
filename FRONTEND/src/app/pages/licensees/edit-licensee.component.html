@@ -1,0 +1,46 @@
+<h1 mat-dialog-title *ngIf="isNew">{{'licensee.addLicense' | translate}}</h1>
+<h1 mat-dialog-title *ngIf="!isNew && !data.isVariation">{{'licensee.editLicense' | translate}}</h1>
+<h1 mat-dialog-title *ngIf="data.isVariation">{{'common.variation' | translate}}</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between" *ngIf="form">
+        <input-string formControlName="number" label="licensee.number" class="w-full sm:w-49-pc md:w-24-pc">
+        </input-string>
+        <input-date formControlName="releaseDate" label="licensee.releaseDate" class="w-full sm:w-49-pc md:w-24-pc"
+            [utc]="false"></input-date>
+        <select-box formControlName="licenseesIssuingOfficeId" label="licensee.releasedBy" [items]="issuingOfficeItems"
+            class="w-full md:w-49-pc"></select-box>
+        <select-box formControlName="status" label="licensee.state" [items]="stateItems" class="w-full sm:w-49-pc "
+            [ngClass]="{'md:w-24-pc':data.isTaxi}">
+        </select-box>
+        <input-string formControlName="acronym" label="common.acronym" class="w-full sm:w-49-pc"
+            [ngClass]="{'md:w-24-pc':data.isTaxi}">
+        </input-string>
+        <div class="w-full md:w-49-pc flex flex-wrap justify-between" *ngIf="data.isTaxi">
+            <select-box formControlName="shiftId" label="shift.shift" [items]="typeItems" class="w-full md:w-48-pc">
+            </select-box>
+            <select-box formControlName="subShiftId" label="shift.subshift" [items]="subTypeItems"
+                class="w-full md:w-48-pc"></select-box>
+        </div>
+        <select-box formControlName="taxiDriverAssociationId" label="licensee.categoryAssociationName"
+            [items]="categoryItems" class="w-full sm:w-55-pc md:w-65-pc"></select-box>
+        <input-slide formControlName="isFamilyCollaboration" label="drivers.familiaryShift" [items]="collaborationItems"
+            class="w-full sm:w-40-pc md:w-30-pc">
+        </input-slide>
+        <input-string formControlName="garageAddress" label="licensee.carGarage" class="w-full sm:w-55-pc md:w-65-pc"
+            *ngIf="!data.isTaxi"></input-string>
+        <input-slide formControlName="isFinancialAdministration" label="economicManagement.economicManagement"
+            *ngIf="!data.isTaxi" class="w-full sm:w-40-pc md:w-30-pc"></input-slide>
+        <input-string formControlName="note" label="common.annotations" class="w-full">
+        </input-string>
+        <input-string formControlName="activityExpiredOnCause" label="licensee.expireActivityCause" class="w-full">
+        </input-string>
+        <input-string formControlName="variationNote" label="common.note" class="w-full" *ngIf="data.isVariation">
+        </input-string>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-raised-button mat-dialog-close><span>{{'common.undo' | translate}}</span></button>
+    <button mat-raised-button (click)="save()" color="accent" [disabled]="!form" cdkFocusInitial><span>{{'common.save' |
+            translate}}</span></button>
+</mat-dialog-actions>

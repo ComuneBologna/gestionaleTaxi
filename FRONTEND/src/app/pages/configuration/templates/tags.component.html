@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{'template.tags' | translate}}</h1>
+<mat-dialog-content>
+    <chips [items]="tags" [removable]="false"></chips>
+</mat-dialog-content>
+
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.close' | translate}}
+    </button>
+</mat-dialog-actions>

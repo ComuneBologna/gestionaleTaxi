@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>
+    {{'template.sendNotification' | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between" *ngIf="form">        
+        <autocomplete formControlName="ids" (onSelectedItem)="onSelectedItem($event)" label="template.selectDocument" itemLabel="templateDescription" 
+            [remote]="false" [items]="templates" [resetOnItemSelected]="true" class="w-full">
+        </autocomplete>
+        <chips [items]="templatesSelected" [removable]="true" (remove)="removeUser($event)" itemLabel="templateDescription"></chips>
+        <tag-string class="w-full" formControlName="executiveEmail" label="template.executiveMail" placeHolder="template.pressEnter"></tag-string>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        <span >{{'template.send' | translate}}</span>
+    </button>
+</mat-dialog-actions>

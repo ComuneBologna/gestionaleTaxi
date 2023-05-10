@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>
+    {{'template.checkEmailStatus' | translate}}
+</h1>
+<mat-dialog-content>
+    <p class="justify-center">{{'email.status' | translate}}</p>
+    <p class="font-bold">{{status | enum:'EmailStatus'}}</p>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+</mat-dialog-actions>

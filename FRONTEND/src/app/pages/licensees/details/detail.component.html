@@ -1,0 +1,63 @@
+<right-bar [verticalCenter]="true" cssClass="w-full sm:w-50-pc md:w-40-pc lg:w-30-pc xl:w-25-pc" *ngIf="loaded">
+    <div class="flex flex-col items-center justify-between" header>
+        <div class="flex items-center">
+            <span class="text-2xl font-extrabold items-end">{{'common.detail' | translate}}</span>
+        </div>
+    </div>
+    <div body class="flex flex-col flex-wrap flex-auto p-2 h-full">
+        <div class="justify-start text-start flex-col flex" fusePerfectScrollbar>
+            <div class="rounded-2xl shadow-md bg-primary justify-items-center text-center mt-4">
+                <span class="text-center text-lg text-white font-semibold p-2">n° {{licensee.number}} - {{licensee?.status | enum:'LicenseeStateTypes'}}</span>
+            </div>
+            <div class="w-full flex flex-wrap m-2 mt-4 justify-between overflow-auto">
+                <field-viewer class="w-49-pc mb-5" label="licensee.releaseDate">
+                    {{licensee?.releaseDate | onlydate}}
+                </field-viewer>
+                <field-viewer class="w-49-pc mb-5" label="licensee.endDate">
+                    {{licensee?.endDate | onlydate}}
+                </field-viewer>
+                <field-viewer class="w-full mb-5" label="shift.name" *ngIf="isTaxi">
+                    {{licensee?.shiftName}} - {{licensee?.subShiftName}}
+                </field-viewer>
+                <field-viewer class="w-full mb-5" label="licensee.releasedBy">
+                    {{licensee?.licenseesIssuingOfficeDescription}}
+                </field-viewer>
+                <field-viewer class="w-49-pc mb-5" label="common.acronym">
+                    {{licensee?.acronym}}
+                </field-viewer>
+                <field-viewer class="w-49-pc mb-5" label="drivers.familiary">
+                    {{(licensee?.isFamilyCollaboration ? 'common.yes':'common.no') | translate}}
+                </field-viewer>
+                <field-viewer class="w-49-pc mb-5" label="licensee.carGarage" *ngIf="!isTaxi">
+                    {{licensee?.garageAddress}}
+                </field-viewer>
+                <field-viewer class="w-49-pc mb-5" label="economicManagement.economicManagement" *ngIf="!isTaxi">
+                    {{licensee?.isFinancialAdministration ?'common.yes':'common.no' | translate}}
+                </field-viewer>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="w-full flex flex-wrap m-2 justify-between overflow-auto">
+                <field-viewer class="w-49-pc mb-5" label="owner.owner">
+                    <p>{{owner?.personDisplayName}}</p>
+                </field-viewer>
+                <field-viewer class="w-49-pc mb-5" label="person.phoneNumber">
+                    <p>{{owner?.phoneNumber}}</p>
+                </field-viewer>
+                <field-viewer class="w-49-pc mb-5" label="person.pecOrEmail">
+                    <p>{{owner?.emailOrPEC}}</p>
+                </field-viewer>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="w-full flex flex-wrap m-2 justify-between overflow-auto" *ngIf="substitution">
+                <div class="w-full justify-between mb-5">
+                    <p class="font-bold text-base">{{'licensee.licenseeSubstitution' | translate}}</p>
+                    <p class="text-orange-600 font-bold">{{(substitution?.isExpiring ? 'common.isExpiring' : '') | translate}}</p>
+                    <p>{{substitution?.status | enum:'SubstitutionsStatus'}} | {{substitution?.startDate | onlydate}} - {{substitution?.endDate | onlydate}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center pb-2 pt-2 border-t" footer>
+        <button class="shadow-md bg-primary text-white hover:bg-gray-200 font-bold py-2 px-4 rounded-full mx-2" (click)="edit()">{{'common.compile' | translate}}</button>
+    </div>
+</right-bar>

@@ -1,0 +1,53 @@
+<h1 mat-dialog-title>
+    {{(isNew ? 'shift.addShift' : 'shift.editShift') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between items-center" *ngIf="form">
+        <input-string formControlName="name" label="shift.name" fxFlex="66" class="w-full md:w-66-pc"></input-string>
+        <input-int formControlName="durationInHour" label="shift.durationInHour" class="w-full md:w-32-pc"
+            [maxlength]="2"></input-int>
+        <input-int formControlName="restDayFrequencyInDays" label="shift.restDayFrequencyInDays"
+            class="w-full md:w-32-pc" [maxlength]="2"></input-int>
+        <input-int formControlName="breakThresholdActivationInHour" label="shift.breakThresholdActivationInHour"
+            class="w-full md:w-32-pc" [maxlength]="2"></input-int>
+        <input-int formControlName="breakInHours" label="shift.breakInHours" class="w-full md:w-32-pc" [maxlength]="2">
+        </input-int>
+        <input-slide formControlName="isHandicapMode" label="shift.isHandicapMode" class="w-full md:w-32-pc">
+        </input-slide>
+        <input-int formControlName="handicapBeforeInHour" label="shift.handicapBeforeInHour" class="w-full md:w-32-pc"
+            [maxlength]="2">
+        </input-int>
+        <input-int formControlName="handicapAfterInHour" label="shift.handicapAfterInHour" class="w-full md:w-32-pc"
+            [maxlength]="2">
+        </input-int>
+        <div class="w-full">
+            <p class="text-lg font-semibold">{{'shift.subshifts' | translate}}</p>
+            <ng-container formArrayName="subShifts">
+                <ng-container *ngFor="let field of subShiftsFormArray.controls; let i=index">
+                    <div class="flex flex-wrap justify-between " [ngClass]="{'pt-4 border-t':i>0}" [formGroupName]="i">
+                        <input-string formControlName="name" label="shift.subShiftName" class="w-full md:w-60-pc">
+                        </input-string>
+                        <select-box formControlName="restDay" label="shift.restDay" [items]="restDayItems"
+                            class="w-80-pc md:w-30-pc"></select-box>
+                        <button mat-icon-button color="warn" class="mt-2" (click)="deleteItem(i)">
+                            <mat-icon svgIcon="fas:xmark"></mat-icon>
+                        </button>
+                    </div>
+                </ng-container>
+                <div class="flex justify-center">
+                    <button mat-raised-button color="accent" (click)="addItem()">
+                        {{'shift.addSubShift' | translate}}
+                    </button>
+                </div>
+            </ng-container>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>

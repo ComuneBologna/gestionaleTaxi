@@ -1,0 +1,154 @@
+{
+    "enums": {
+        "PermissionCodes": {
+            "Taxi_Admin": "Amministratore",
+            "Taxi_Operator": "Operatore",
+            "Taxi_PoliceOfficer": "Poliziotto",
+            "Taxi_Driver": "Tassista",
+            "Taxi_Executive": "Dirigente"
+        },
+        "LicenseeStateTypes": {
+            "Created": "Creata",
+            "Released": "Attiva",
+            "Suspended": "Sospesa",
+            "Terminated": "Terminata"
+        },
+        "LicenseeTypes": {
+            "Taxi": "Taxi",
+            "NCC_Auto": "NCC_Auto"
+        },
+        "ApplicationState": {
+            "Created": "Creata",
+            "Accepted": "Accettata",
+            "ElaborationInProgress": "Elaborazione in corso",
+            "Rejected": "Rigettata",
+            "NeedIntegration": "Necessita integrazione"
+        },
+        "ApplicationType": {
+            "DocumentationRequest": "Richiesta di documentazione",
+            "Note": "Note",
+            "Request": "Richiesta"
+        },
+        "MeasureType": {
+            "Disciplinary": "Sanzione disciplinare",
+            "Fine": "Multa",
+            "Report": "Segnalazione"
+        },
+        "RequestType": {
+            "Holiday": "Ferie",
+            "Sickness": "Malattia",
+            "VehicleStop": "Fermo del veicolo",
+            "DriverSubstitution": "Sostituzione del guidatore",
+            "Other": "Altro"
+        },
+        "RequestStatus": {
+            "Submitted": "Inoltrata",
+            "Accepted": "Accettata",
+            "Rejected": "Rifiutata",
+            "Canceled": "Annullata"
+        },
+        "CategoryAssociationType": {
+            "Cooperative": "Cooperativa",
+            "Individual": "Individuale"
+        },
+        "PersonTypes": {
+            "Legal": "Individuo giuridico",
+            "Physical": "Individuo fisico"
+        },
+        "DaysOfWeek": {
+            "Sunday": "Domenica",
+            "Monday": "Lunedì",
+            "Tuesday": "Martedì",
+            "Wednesday": "Mercoledì",
+            "Thursday": "Giovedì",
+            "Friday": "Venerdì",
+            "Saturday": "Sabato"
+        },
+        "VariationsType": {
+            "Driver": "Tassista",
+            "DriverSubstitution": "Sostituzione guidatore",
+            "State": "Stato",
+            "Category": "Categoria",
+            "Vehicle": "Veicolo",
+            "Owner": "Proprietario"
+        },
+        "States": {
+            "Active": "Attivo",
+            "ClosedForVariation": "Chiuso per variazione",
+            "Deleted": "Cancellato"
+        },
+        "DocumentTypes": {
+            "DrivingLicense": "Patente",
+            "KB": "KB",
+            "RoleRegistration": "Iscrizione al ruolo",
+            "CompanyArtisanRegister": "Albo artigiani/imprese"
+        },
+        "SubstitutionsStatus": {
+            "Active": "Attivo",
+            "ToActivate": "Da attivare",
+            "Terminated": "Terminato",
+            "Archived": "Archiviata"
+        },
+        "TypeVariation": {
+            "Status": "Stato",
+            "AssociationName": "Categoria associata"
+        },
+        "ImportStatus": {
+            "Uploaded": "Caricata",
+            "InProgress": "In progress",
+            "Imported": "Importata",
+            "ImportedWithErrors": "Importata con errori"
+        },
+        "CarFuelTypes": {
+            "Gasoline": "Benzina",
+            "Hydrogen": "Idrogeno",
+            "Hybrid": "Ibrida",
+            "Electric": "Elettrica",
+            "Diesel": "Diesel",
+            "LiquefiedPetroleumGas": "Gpl",
+            "CompressedNaturalGas": "Metano",
+            "BioFuels": "BioFuels"
+        },
+        "FamilyCollaborationTypes": {
+            "A": "A",
+            "B": "B",
+            "F": "F"
+        },
+        "SignType": {
+            "CADES": "CADES",
+            "PADES": "PADES"
+        },
+        "ExecutiveDigitalSignStatus": {
+            "Required": "In corso",
+            "NotRequired": "Non firmato",
+            "Signed": "Firmato"
+        },
+        "FolderType": {
+            "FASCICOLO_DETERMINE": "FASCICOLO_DETERMINE",
+            "FASCICOLO_GENERICO": "FASCICOLO_GENERICO"
+        },
+        "ProxyProtocolDirections": {
+            "Incoming": "In entrata", 
+            "Outgoing": "In uscita", 
+            "Internal": "Interno"
+        },
+        "EmailStatus": {
+            "0": "Messaggio non inviato",
+            "Draft": "Bozza",
+            "ToSend": "Da inviare",
+            "NotSent": "non inviata",
+            "WaitingToTakeCharge": "In attesa di presa in carico",
+            "TakenOver": "Presa in carico",
+            "NonAcceptance": "Mancata accettazione",
+            "NotDelivered": "Mancata consegna",
+            "NotDeliveredForwarding": "Mancata consegna in reinoltro",
+            "NoticeNotDelivered": "Preavviso mancata consegna",
+            "PartiallyDelivered": "parzialmente consegnata",
+            "Delivered": "Consegnata"
+        },
+        "ConsoleFolderType": {
+            "FASCICOLO_GENERICO_2_0": "FASCICOLO GENERICO 2.0",
+            "FASCICOLO_TAXI": "FASCICOLO TAXI"
+        }
+    }
+}

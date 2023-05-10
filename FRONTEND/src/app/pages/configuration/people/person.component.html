@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>
+    {{(isNew ? 'person.addPerson' : 'person.editPerson') | translate}}
+</h1>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-wrap justify-between" *ngIf="form">
+        <select-box formControlName="type" label="common.type" [items]="personItems" class="w-full"></select-box>
+        <input-string formControlName="firstName" label="person.firstName" class="w-full md:w-48-pc" *ngIf="!isLegal"></input-string>
+        <input-string formControlName="lastName" [label]="!isLegal ? 'person.lastName' : 'economicManagement.financialAdministrationCompany'" class="w-full md:w-48-pc"></input-string>
+        <input-string formControlName="fiscalCode" [label]="!isLegal ? 'person.fiscalCode' : 'person.vatNumber'" class="w-full md:w-48-pc"></input-string>
+        <input-date formControlName="birthDate" label="person.birthDate" [utc]="false" class="w-full md:w-48-pc" *ngIf="!isLegal">
+        </input-date>
+        <input-string formControlName="birthCity" label="person.birthPlace" class="w-full md:w-48-pc" *ngIf="!isLegal"></input-string>
+        <input-string formControlName="birthProvince" label="person.birthProvince" class="w-full md:w-48-pc" *ngIf="!isLegal">
+        </input-string>
+        <input-string formControlName="phoneNumber" label="person.phoneNumber" class="w-full md:w-48-pc"></input-string>
+        <input-string formControlName="emailOrPEC" label="person.pecOrEmail" class="w-full md:w-48-pc"></input-string>
+        <input-string formControlName="address" label="person.address" class="w-full md:w-48-pc"></input-string>
+        <input-string formControlName="zipCode" label="person.postalCode" class="w-full md:w-48-pc" *ngIf="!isLegal"></input-string>
+        <input-string formControlName="residentCity" label="person.city" class="w-full md:w-48-pc" *ngIf="!isLegal"></input-string>
+        <input-string formControlName="residentProvince" label="person.residentProvince" class="w-full md:w-48-pc" *ngIf="!isLegal">
+        </input-string>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end">
+    <button mat-raised-button (click)="close()" class="mr-4">
+        {{'common.undo' | translate}}
+    </button>
+    <button mat-raised-button color="accent" (click)="save()">
+        {{'common.save' | translate}}
+    </button>
+</mat-dialog-actions>
