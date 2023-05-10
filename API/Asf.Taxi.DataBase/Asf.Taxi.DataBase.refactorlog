@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="fbca752e-444b-4bd1-8cc4-7eb7e7337492" ChangeDateTime="12/17/2020 15:38:11">
+    <Property Name="ElementName" Value="[Taxi].[States].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[States]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LicenseeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0e719bda-8e1b-4bfc-b342-be6851630d8d" ChangeDateTime="12/31/2020 11:03:23">
+    <Property Name="ElementName" Value="[Taxi].[Licensees].[ReleasePlace]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Licensees]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ReleasedBy" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="92c066d3-5ca0-4bec-870e-16cf4d2591f0" ChangeDateTime="01/07/2021 19:48:16">
+    <Property Name="ElementName" Value="[Taxi].[Drivers].[DriverSubstitutedId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Drivers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DriverSubstitutedById" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9e432fa0-a722-4e2f-96d4-c7ad3473e2b7" ChangeDateTime="01/09/2021 17:59:22">
+    <Property Name="ElementName" Value="[Taxi].[Applications].[AuthorityID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Applications]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AuthorityId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c50ecdab-c620-4c73-b615-dec96eff610e" ChangeDateTime="01/12/2021 18:45:26">
+    <Property Name="ElementName" Value="[Taxi].[CalendarShifts].[DateSwitch]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[CalendarShifts]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateSwitched" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5f4af8b4-4017-457e-ae46-4d700f3fae73" ChangeDateTime="01/13/2021 18:11:52">
+    <Property Name="ElementName" Value="[Taxi].[Alarms].[AllarmType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Alarms]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AlarmType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b4b560d1-2e12-40a0-9827-a7f5163ff9ec" ChangeDateTime="01/14/2021 16:09:56">
+    <Property Name="ElementName" Value="[Taxi].[AlarmAcceptances].[Timestampt]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[AlarmAcceptances]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Timestamp" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ca0d54c5-3705-420f-b0ad-6f0107da1c0c" ChangeDateTime="01/15/2021 11:28:06">
+    <Property Name="ElementName" Value="[Taxi].[AlarmAcceptances].[TypeOf]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[AlarmAcceptances]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SelectedTimeSpan" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6bc499f1-fcca-479f-b0dd-a0e0e62e3f4e" ChangeDateTime="01/15/2021 11:31:08">
+    <Property Name="ElementName" Value="[Taxi].[AlarmAcceptances].[SelectedTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[AlarmAcceptances]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SelectedTimeSlot" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e03dddf7-c7f4-4bc5-b047-9472314d0df4" ChangeDateTime="01/15/2021 13:31:38">
+    <Property Name="ElementName" Value="[Taxi].[AlarmAcceptances].[SelectedTimeSlot]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[AlarmAcceptances]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExpoTimeSlot" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f9a7aaa5-9f13-40c7-b4f5-d5c58b146385" ChangeDateTime="01/18/2021 09:25:26">
+    <Property Name="ElementName" Value="[Taxi].[Alarms].[AlternateSubshiftFlag]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Alarms]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AlternateSubShiftFlag" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2ef23097-991b-47e4-9a1b-b1c671f852dc" ChangeDateTime="01/21/2021 11:15:41">
+    <Property Name="ElementName" Value="[Taxi].[Vehicles].[VehicleLicensePlate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Vehicles]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LicensePlate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="baa29825-dae2-4cdf-a2c7-d972d372fe6e" ChangeDateTime="01/21/2021 11:15:47">
+    <Property Name="ElementName" Value="[Taxi].[Vehicles].[VehicleRegistrationDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Vehicles]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RegistrationDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cee4f443-7ab0-4528-81b0-0e1e3d1ccc4e" ChangeDateTime="03/01/2021 20:03:52">
+    <Property Name="ElementName" Value="[Taxi].[Owners].[ValidityDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Owners]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DocumentValidityDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6c0f0766-f52a-4ada-bbe6-49c7f0d20912" ChangeDateTime="03/01/2021 21:01:20">
+    <Property Name="ElementName" Value="[Taxi].[Drivers].[ValidityDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Drivers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DrivingLicenseValidityDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="801d5106-0821-422d-9460-c78d5c76af04" ChangeDateTime="05/18/2021 17:20:28">
+    <Property Name="ElementName" Value="[dbo].[Attachments].[Authori]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Attachments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AuthorityId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6d731a65-d5c3-43f5-b342-f04c0c279cd9" ChangeDateTime="05/31/2021 15:36:15">
+    <Property Name="ElementName" Value="[Variation].[TaxiDrivers].[SysStartDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Variation].[TaxiDrivers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SysStartTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9472647b-f13e-44a2-b41b-54d7ad95d212" ChangeDateTime="05/31/2021 15:36:22">
+    <Property Name="ElementName" Value="[Variation].[TaxiDrivers].[SysEndDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Variation].[TaxiDrivers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SysEndTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8f15cfa2-5d33-4476-8411-190c5e527411" ChangeDateTime="06/24/2021 11:09:46">
+    <Property Name="ElementName" Value="[dbo].[Taxi].[auth]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Taxi]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AuthorityId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="49f75ab1-2075-4a35-b01e-401db5c26af9" ChangeDateTime="06/24/2021 11:28:52">
+    <Property Name="ElementName" Value="[Import].[Errors].[Description]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Import].[Errors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ImportId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="56248871-ab68-4ef5-bcdb-649745696aaf" ChangeDateTime="06/24/2021 11:29:05">
+    <Property Name="ElementName" Value="[Import].[Errors].[Path]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Import].[Errors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LogPath" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="80c715a6-742d-48ea-b3de-e2af35223a79" ChangeDateTime="06/24/2021 11:29:14">
+    <Property Name="ElementName" Value="[Import].[Errors].[Status]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Import].[Errors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LogFileName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9c2d037a-fd33-42d3-8fdb-6bd91a322baf" ChangeDateTime="06/24/2021 11:29:23">
+    <Property Name="ElementName" Value="[Import].[Errors].[CreatedAt]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Import].[Errors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LogDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a8cccfa7-db1b-43c0-8d75-337cdb78fb20" ChangeDateTime="10/08/2021 14:29:08">
+    <Property Name="ElementName" Value="[Taxi].[Documents].[ReleaseDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[Documents]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ValidityDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9c22b553-eb17-43e2-ae73-556c76df171a" ChangeDateTime="10/11/2021 16:24:32">
+    <Property Name="ElementName" Value="[Variation].[Licensees].[VariationNote]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Variation].[Licensees]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Note" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a97209b8-d52e-4ff8-9b81-673040db7163" ChangeDateTime="03/17/2022 08:34:26">
+    <Property Name="ElementName" Value="[Taxi].[RequestsRegisters].[InternalProtocolNumber]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[RequestsRegisters]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProtocolNumber" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6a727752-9850-4621-9d4b-5fbd9c7817ba" ChangeDateTime="03/17/2022 08:34:35">
+    <Property Name="ElementName" Value="[Taxi].[RequestsRegisters].[InternalProtocolDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[Taxi].[RequestsRegisters]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProtocolDate" />
+  </Operation>
+</Operations>

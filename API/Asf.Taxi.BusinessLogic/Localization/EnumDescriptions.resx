@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllarmTypes_Emergency" xml:space="preserve">
+    <value>Emergenza</value>
+  </data>
+  <data name="AllarmTypes_Event" xml:space="preserve">
+    <value>Evento</value>
+  </data>
+  <data name="AllarmTypes_Expo" xml:space="preserve">
+    <value>Fiera</value>
+  </data>
+  <data name="AllarmTypes_Turn" xml:space="preserve">
+    <value>Turno</value>
+  </data>
+  <data name="CarFuelTypes_BioFuels" xml:space="preserve">
+    <value>BioFuels</value>
+  </data>
+  <data name="CarFuelTypes_CompressedNaturalGas" xml:space="preserve">
+    <value>Metano</value>
+  </data>
+  <data name="CarFuelTypes_Diesel" xml:space="preserve">
+    <value>Diesel</value>
+  </data>
+  <data name="CarFuelTypes_Electric" xml:space="preserve">
+    <value>Elettrica</value>
+  </data>
+  <data name="CarFuelTypes_Gasoline" xml:space="preserve">
+    <value>Benzina</value>
+  </data>
+  <data name="CarFuelTypes_Hybrid" xml:space="preserve">
+    <value>Ibrida</value>
+  </data>
+  <data name="CarFuelTypes_Hydrogen" xml:space="preserve">
+    <value>Idrogeno</value>
+  </data>
+  <data name="CarFuelTypes_LiquefiedPetroleumGas" xml:space="preserve">
+    <value>GPL</value>
+  </data>
+  <data name="LicenseeStatus_Created" xml:space="preserve">
+    <value>Creata</value>
+  </data>
+  <data name="LicenseeStatus_Released" xml:space="preserve">
+    <value>Attiva</value>
+  </data>
+  <data name="LicenseeStatus_Suspended" xml:space="preserve">
+    <value>Sospesa</value>
+  </data>
+  <data name="LicenseeStatus_Terminated" xml:space="preserve">
+    <value>Terminata</value>
+  </data>
+  <data name="LicenseeTypes_NCC_Auto" xml:space="preserve">
+    <value>NCC_Auto</value>
+  </data>
+  <data name="LicenseeTypes_NCC_Bus" xml:space="preserve">
+    <value>NCC_Bus</value>
+  </data>
+  <data name="LicenseeTypes_Taxi" xml:space="preserve">
+    <value>Taxi</value>
+  </data>
+  <data name="MeasureTypes_Disciplinary" xml:space="preserve">
+    <value>Sanzione disciplinare</value>
+  </data>
+  <data name="MeasureTypes_Fine" xml:space="preserve">
+    <value>Multa</value>
+  </data>
+  <data name="MeasureTypes_Report" xml:space="preserve">
+    <value>Segnalazione</value>
+  </data>
+  <data name="RequestStatus_Accepted" xml:space="preserve">
+    <value>Accettata</value>
+  </data>
+  <data name="RequestStatus_Canceled" xml:space="preserve">
+    <value>Annullata</value>
+  </data>
+  <data name="RequestStatus_Rejected" xml:space="preserve">
+    <value>Rifiutata</value>
+  </data>
+  <data name="RequestStatus_Submitted" xml:space="preserve">
+    <value>Inoltrata</value>
+  </data>
+  <data name="RequestTypes_DriverSubstitution" xml:space="preserve">
+    <value>Sostituzione alla guida</value>
+  </data>
+  <data name="RequestTypes_Holiday" xml:space="preserve">
+    <value>Ferie</value>
+  </data>
+  <data name="RequestTypes_Other" xml:space="preserve">
+    <value>Altro</value>
+  </data>
+  <data name="RequestTypes_Sickness" xml:space="preserve">
+    <value>Malattia</value>
+  </data>
+  <data name="RequestTypes_VehicleStop" xml:space="preserve">
+    <value>Fermo macchina</value>
+  </data>
+  <data name="ShiftTypes_CollaborazioneFamiliare_5Plus1" xml:space="preserve">
+    <value>Collaborazione familiare di tipo 5 + 1</value>
+  </data>
+  <data name="ShiftTypes_CollaborazioneFamiliare_7Plus1" xml:space="preserve">
+    <value>Collaborazione familiare di tipo 7 + 1</value>
+  </data>
+  <data name="ShiftTypes_CollaborazioneFamiliare_Colorato" xml:space="preserve">
+    <value>Collaborazione familiare di tipo colorato</value>
+  </data>
+  <data name="ShiftTypes_Colorato" xml:space="preserve">
+    <value>Colorato</value>
+  </data>
+  <data name="ShiftTypes_Speciale" xml:space="preserve">
+    <value>Speciale</value>
+  </data>
+  <data name="ShiftTypes__5Plus1" xml:space="preserve">
+    <value>5+1</value>
+  </data>
+  <data name="ShiftTypes__7Plus1" xml:space="preserve">
+    <value>7+1</value>
+  </data>
+  <data name="SubShiftTypes_Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="SubShiftTypes_Green" xml:space="preserve">
+    <value>Verde</value>
+  </data>
+  <data name="SubShiftTypes_NOSub" xml:space="preserve">
+    <value>Senza sottoturno</value>
+  </data>
+  <data name="SubShiftTypes_Red_A" xml:space="preserve">
+    <value>Rosso A</value>
+  </data>
+  <data name="SubShiftTypes_Red_B" xml:space="preserve">
+    <value>Rosso B</value>
+  </data>
+  <data name="SubShiftTypes_Red_C" xml:space="preserve">
+    <value>Rosso C</value>
+  </data>
+  <data name="SubShiftTypes_Red_Odd" xml:space="preserve">
+    <value>Rosso dispari</value>
+  </data>
+  <data name="SubShiftTypes_White_Even" xml:space="preserve">
+    <value>Bianco pari</value>
+  </data>
+  <data name="SubShiftTypes_White_X" xml:space="preserve">
+    <value>Bianco X</value>
+  </data>
+  <data name="SubShiftTypes_White_Y" xml:space="preserve">
+    <value>Bianco Y</value>
+  </data>
+  <data name="SubShiftTypes_White_Z" xml:space="preserve">
+    <value>Bianco Z</value>
+  </data>
+  <data name="SubShiftTypes__1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SubShiftTypes__2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SubShiftTypes__21" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="SubShiftTypes__22" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="SubShiftTypes__23" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="SubShiftTypes__24" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="SubShiftTypes__25" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="SubShiftTypes__26" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="SubShiftTypes__3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="SubShiftTypes__4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SubShiftTypes__5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="SubShiftTypes__6" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="SubShiftTypes__7" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="SubShiftTypes__8" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="TimestampTypes_EndPause" xml:space="preserve">
+    <value>Fine stacco</value>
+  </data>
+  <data name="TimestampTypes_EndShift" xml:space="preserve">
+    <value>Fine turno</value>
+  </data>
+  <data name="TimestampTypes_StartPause" xml:space="preserve">
+    <value>Inizio stacco</value>
+  </data>
+  <data name="TimestampTypes_StartShift" xml:space="preserve">
+    <value>Inizio turno</value>
+  </data>
+</root>

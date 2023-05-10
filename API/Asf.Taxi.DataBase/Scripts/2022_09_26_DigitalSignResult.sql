@@ -1,0 +1,1 @@
+﻿ALTER TABLE Taxi.RequestsRegisters ADD DigitalSignResult VARCHAR(MAX) NULL;

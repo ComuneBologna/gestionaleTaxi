@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accepted" xml:space="preserve">
+    <value>Accettato</value>
+  </data>
+  <data name="Acronym" xml:space="preserve">
+    <value>Acronimo</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Attiva</value>
+  </data>
+  <data name="AllarmType" xml:space="preserve">
+    <value>Tipo di allarme</value>
+  </data>
+  <data name="Annual" xml:space="preserve">
+    <value>Anno</value>
+  </data>
+  <data name="ApplicationState" xml:space="preserve">
+    <value>Stato istanza</value>
+  </data>
+  <data name="ApplicationType" xml:space="preserve">
+    <value>Tipo istanza</value>
+  </data>
+  <data name="Attachment_NotFound" xml:space="preserve">
+    <value>Allegato non trovato</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Data di nascita</value>
+  </data>
+  <data name="BirthPlace" xml:space="preserve">
+    <value>Luogo di nascita</value>
+  </data>
+  <data name="BreakInHours" xml:space="preserve">
+    <value>Ore massime di pausa</value>
+  </data>
+  <data name="BreakThresholdActivationInHour" xml:space="preserve">
+    <value>Durata minima di lavoro per usufruire della pausa</value>
+  </data>
+  <data name="CarFuelType" xml:space="preserve">
+    <value>Alimentazione</value>
+  </data>
+  <data name="Causal" xml:space="preserve">
+    <value>Causale</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Comune</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrizione</value>
+  </data>
+  <data name="DocumentType" xml:space="preserve">
+    <value>Tipo Documento</value>
+  </data>
+  <data name="DriverId" xml:space="preserve">
+    <value>Id guidatore</value>
+  </data>
+  <data name="DriverIdFrom" xml:space="preserve">
+    <value>Id guidatore da sostituire</value>
+  </data>
+  <data name="DriverIdTo" xml:space="preserve">
+    <value>Id guidatore che sostituisce</value>
+  </data>
+  <data name="Drivers" xml:space="preserve">
+    <value>Tassisti</value>
+  </data>
+  <data name="DriverType" xml:space="preserve">
+    <value>Tipologia di guidatore</value>
+  </data>
+  <data name="DrivingLicenceNumber" xml:space="preserve">
+    <value>Numero patente</value>
+  </data>
+  <data name="DurationInHour" xml:space="preserve">
+    <value>Durata turno in ore</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailOrPEC" xml:space="preserve">
+    <value>PEC</value>
+  </data>
+  <data name="EmailOrPECFormat" xml:space="preserve">
+    <value>Formato Email/PEC non corretto</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Data scadenza</value>
+  </data>
+  <data name="ExpireActivityCause" xml:space="preserve">
+    <value>Motivo cessata attività</value>
+  </data>
+  <data name="ExpireActivityDate" xml:space="preserve">
+    <value>Data cessata attività</value>
+  </data>
+  <data name="ExpoTimeSlot" xml:space="preserve">
+    <value>Tipo orario allarme fiera</value>
+  </data>
+  <data name="ExternalPath" xml:space="preserve">
+    <value>Path risorsa esterna</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Nome file</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="FiscalCode" xml:space="preserve">
+    <value>Codice fiscale</value>
+  </data>
+  <data name="FiscalCodeFormat" xml:space="preserve">
+    <value>Formato del codice fiscale non corretto</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>Data inizio</value>
+  </data>
+  <data name="GarageAddress" xml:space="preserve">
+    <value>Indirizzo rimessa</value>
+  </data>
+  <data name="HandicapAfterInHour" xml:space="preserve">
+    <value>Modalità penalizzazione ore dopo della fine del turno</value>
+  </data>
+  <data name="HandicapBeforeInHour" xml:space="preserve">
+    <value>Modalità penalizzazione ore prima dell'inizio turno</value>
+  </data>
+  <data name="InUseSince" xml:space="preserve">
+    <value>In uso dal</value>
+  </data>
+  <data name="InvalidRole" xml:space="preserve">
+    <value>Ruolo non valido.</value>
+  </data>
+  <data name="IsFamily" xml:space="preserve">
+    <value>Turno famigliare</value>
+  </data>
+  <data name="IsFamilyCollaboration" xml:space="preserve">
+    <value>Collaborazione familiare</value>
+  </data>
+  <data name="IsFinancialAdministration" xml:space="preserve">
+    <value>Gestione economica</value>
+  </data>
+  <data name="IsHandicapMode" xml:space="preserve">
+    <value>Modalità penalizzazione</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Cognome</value>
+  </data>
+  <data name="LegalPerson" xml:space="preserve">
+    <value>Persona giuridica</value>
+  </data>
+  <data name="LicenseeId" xml:space="preserve">
+    <value>Id licenza</value>
+  </data>
+  <data name="LicenseeType" xml:space="preserve">
+    <value>Tipo licenza</value>
+  </data>
+  <data name="LicensePlate" xml:space="preserve">
+    <value>Targa</value>
+  </data>
+  <data name="MeasureType" xml:space="preserve">
+    <value>Tipo sanzione</value>
+  </data>
+  <data name="MeasureTypeId" xml:space="preserve">
+    <value>Id tipo sanzione</value>
+  </data>
+  <data name="MimeType" xml:space="preserve">
+    <value>MimeType</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Modello</value>
+  </data>
+  <data name="Nominative" xml:space="preserve">
+    <value>Ragione sociale</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Numero</value>
+  </data>
+  <data name="OwnerId" xml:space="preserve">
+    <value>Id titolare</value>
+  </data>
+  <data name="PersonId" xml:space="preserve">
+    <value>Id persona</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Numero di telefono</value>
+  </data>
+  <data name="PhoneNumberFormat" xml:space="preserve">
+    <value>Formato del numero di telefono non corretto</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>CAP</value>
+  </data>
+  <data name="ProtocolDate" xml:space="preserve">
+    <value>Data protocollo</value>
+  </data>
+  <data name="ProtocolNumber" xml:space="preserve">
+    <value>Numero protocollo</value>
+  </data>
+  <data name="Recipient" xml:space="preserve">
+    <value>Destinatario</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Riferimento</value>
+  </data>
+  <data name="RejectReason" xml:space="preserve">
+    <value>Motivo rifiuto</value>
+  </data>
+  <data name="ReleaseDate" xml:space="preserve">
+    <value>Data rilascio</value>
+  </data>
+  <data name="ReleasedBy" xml:space="preserve">
+    <value>Rilasciata da</value>
+  </data>
+  <data name="Request" xml:space="preserve">
+    <value>Richiesta</value>
+  </data>
+  <data name="RequestStatus" xml:space="preserve">
+    <value>Stato richiesta</value>
+  </data>
+  <data name="RequestType" xml:space="preserve">
+    <value>Tipo richiesta</value>
+  </data>
+  <data name="RestDay" xml:space="preserve">
+    <value>Giorno di riposo</value>
+  </data>
+  <data name="RestDayFrequencyInDays" xml:space="preserve">
+    <value>Frequenza giorni di lavoro prima del giorno di riposo</value>
+  </data>
+  <data name="Rules" xml:space="preserve">
+    <value>Regole</value>
+  </data>
+  <data name="ShiftStarts" xml:space="preserve">
+    <value>Orario inizio turno</value>
+  </data>
+  <data name="ShiftStartsFormat" xml:space="preserve">
+    <value>Formato orario del turno non corretto</value>
+  </data>
+  <data name="ShiftType" xml:space="preserve">
+    <value>Tipo turno</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Data inizio</value>
+  </data>
+  <data name="StateDate" xml:space="preserve">
+    <value>Data stato</value>
+  </data>
+  <data name="StateDescription" xml:space="preserve">
+    <value>Descrizione stato</value>
+  </data>
+  <data name="StateId" xml:space="preserve">
+    <value>Id stato</value>
+  </data>
+  <data name="StateType" xml:space="preserve">
+    <value>Tipo stato</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Stato</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Oggetto</value>
+  </data>
+  <data name="SubShifts" xml:space="preserve">
+    <value>Sottoturni</value>
+  </data>
+  <data name="SubShiftType" xml:space="preserve">
+    <value>Tipo sottoturno</value>
+  </data>
+  <data name="SubstitutionEndDate" xml:space="preserve">
+    <value>Data fine sostituzione</value>
+  </data>
+  <data name="SubstitutionStartDate" xml:space="preserve">
+    <value>Data inizio sostituzione</value>
+  </data>
+  <data name="TaxiDriverAssociationId" xml:space="preserve">
+    <value>Id associazione di categoria</value>
+  </data>
+  <data name="TimeSlotType_ExpoWithPause" xml:space="preserve">
+    <value>Spezzato fiera</value>
+  </data>
+  <data name="TimeSlotType_Free" xml:space="preserve">
+    <value>Libero</value>
+  </data>
+  <data name="TimeSlotType_PreAllocated" xml:space="preserve">
+    <value>Preassegnato</value>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>Orario</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>Data fine</value>
+  </data>
+  <data name="ToSignByAdmin" xml:space="preserve">
+    <value>Necessaria firma del dirigente</value>
+  </data>
+  <data name="UserAlreadyExists" xml:space="preserve">
+    <value>Utente già esistente.</value>
+  </data>
+  <data name="ValidityDate" xml:space="preserve">
+    <value>Data validità</value>
+  </data>
+  <data name="VariationNote" xml:space="preserve">
+    <value>Note sulla variazione</value>
+  </data>
+  <data name="VATNumber" xml:space="preserve">
+    <value>Partita IVA</value>
+  </data>
+  <data name="VATNumberFormat" xml:space="preserve">
+    <value>Formato della Partita IVA non corretto</value>
+  </data>
+  <data name="VehicleId" xml:space="preserve">
+    <value>Id veicolo</value>
+  </data>
+  <data name="VehicleLicensePlate" xml:space="preserve">
+    <value>Targa veicolo</value>
+  </data>
+  <data name="VehicleRegistrationDate" xml:space="preserve">
+    <value>Data registrazione veicolo</value>
+  </data>
+  <data name="ZipCodeFormat" xml:space="preserve">
+    <value>Formato del Codice di Avviamento Postale non corretto</value>
+  </data>
+</root>

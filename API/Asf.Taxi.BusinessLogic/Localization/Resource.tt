@@ -1,0 +1,114 @@
+﻿<#@ template debug="true" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="EnvDTE80" #>
+<#@ assembly name="VSLangProj" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="Microsoft.VisualStudio.Shell.Interop" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="EnvDTE80" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#
+DTE dte = null;
+var serviceProvider = Host as IServiceProvider;
+if (serviceProvider != null) {
+dte = serviceProvider.GetService(typeof(SDTE)) as DTE;
+}
+
+var project = dte.Solution.FindProjectItem(Host.TemplateFile).ContainingProject;
+try
+{
+string rootNamespace = project.Properties.Item("RootNamespace").Value.ToString();
+var resources = GetResources(project.ProjectItems, "");
+
+foreach(var currentNamespace in resources.Select(s=> s.Namespace).Distinct())
+{
+var namespaceToPrint = rootNamespace + ((string.IsNullOrWhiteSpace(currentNamespace) ? "" : "." + currentNamespace));
+WriteLine("");
+WriteLine(string.Format("namespace {0}", namespaceToPrint));
+WriteLine("{");
+foreach(var currentClass in resources.Where(w => w.Namespace == currentNamespace).Select(s => s.ClassName).Distinct())
+{
+WriteLine(string.Format("\tpublic static class {0}Const", currentClass));
+WriteLine("\t{");
+
+foreach(var currentElement in resources.Where(w => w.Namespace == currentNamespace && w.ClassName == currentClass))
+{
+WriteLine(string.Format("\t\tpublic const string {0} = \"{1}\";", ClearKey(currentElement.Key), namespaceToPrint + "." +currentClass + ", " + rootNamespace + "|" + currentElement.Key));
+}
+WriteLine("\t}");
+}
+WriteLine("}");
+}
+
+}
+catch(Exception ex)
+{
+Error(ex.ToString());
+}
+#>
+
+<#+
+
+string ClearKey(string key)
+{
+string newKey = key.Replace("/","").Replace("-","");
+for (int i = 0; i < 10; i++)
+{
+if (newKey.StartsWith(i.ToString()))
+{
+newKey = "_" + newKey;
+break;
+}
+}
+return newKey;
+}
+
+List<ResourceEntry> GetResources(ProjectItems items, string path)
+{
+var ret = new List<ResourceEntry>();
+foreach(ProjectItem item in items)
+{
+if(Path.GetExtension(item.Name) == ".resx" && !Regex.IsMatch(item.Name, @".*\.[a-zA-z]{2}(-[a-zA-z]{2})?\.resx"))
+{
+var filePath = (string)item.Properties.Item("FullPath").Value;
+var xml = new XmlDocument();
+xml.Load(filePath);
+var entries = xml.DocumentElement.SelectNodes("//data");
+
+foreach (XmlElement entryElement in entries)
+{
+
+var entry = new ResourceEntry();
+if (path.Length > 0)
+{
+entry.Namespace = path.Substring(1);
+}
+entry.ClassName = item.Name.Replace(".resx", "");
+entry.Key = entryElement.Attributes["name"].Value;
+ret.Add(entry);
+}
+}
+
+if(item.Kind == "{6BB5F8EF-4483-11D3-8BCF-00C04F8EC28C}")
+{
+ret.AddRange(GetResources(item.ProjectItems, path + "." + item.Name));
+}
+}
+return ret;
+}
+
+public class ResourceEntry
+{
+public string Namespace { get; set; }
+public string ClassName { get; set; }
+public string Key { get; set; }
+}
+
+#>

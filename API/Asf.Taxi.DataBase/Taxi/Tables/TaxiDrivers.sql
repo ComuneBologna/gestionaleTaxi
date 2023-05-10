@@ -1,0 +1,25 @@
+﻿CREATE TABLE [Taxi].[TaxiDrivers]
+(
+	[Id] BIGINT IDENTITY (1, 1) NOT NULL,
+	[AuthorityId] BIGINT NOT NULL,
+	[FirstName] VARCHAR(128) NULL,
+	[LastName] VARCHAR(MAX) NULL,
+	[FiscalCode] VARCHAR(64) NULL,
+	[BirthDate] DATE NULL,
+	[BirthCity] VARCHAR(128) NULL,
+	[BirthProvince] VARCHAR(128) NULL,
+	[ResidentCity] VARCHAR(128) NULL,
+	[ResidentProvince] VARCHAR(128) NULL,
+	[PhoneNumber] VARCHAR(16),
+	[EmailOrPEC] NVARCHAR(256),
+	[Address] VARCHAR(MAX),
+	[ZipCode] VARCHAR(16) NULL,
+	[LicenseeId] BIGINT NULL,
+	[ShiftStartHour] TINYINT NULL,
+	[ShiftStartMinutes] TINYINT NULL,
+	[SysStartTime] DATETIME NULL,
+    [CollaborationType] TINYINT NULL, 
+	[Type] TINYINT NULL,
+    CONSTRAINT [PK_TaxiDriversId] PRIMARY KEY Clustered ([Id] ASC),
+	INDEX [IX_People_AuthorityId_FiscalCode] NONCLUSTERED ([AuthorityId], [FiscalCode])
+)

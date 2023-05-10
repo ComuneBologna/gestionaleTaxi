@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	<TargetFramework>net6.0</TargetFramework>
+	<AzureFunctionsVersion>v4</AzureFunctionsVersion>
+	<OutputType>Exe</OutputType>
+	<LangVersion>preview</LangVersion>
+	<_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>
+	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<DockerFastModeProjectMountDirectory>/home/site/wwwroot</DockerFastModeProjectMountDirectory>
+	<ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+	<PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.10.0" />
+	<PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Timer" Version="4.1.0" />
+	<PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.7.0" />
+	<PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.ServiceBus" Version="5.7.0" />
+	<PackageReference Include="SmartTech.Infrastructure.Cache.Redis" Version="6.0.22328.7" />
+	<PackageReference Include="SmartTech.Infrastructure.Functions" Version="6.0.22328.7" />
+	<PackageReference Include="SmartTech.Infrastructure" Version="6.0.22328.7" />
+	<PackageReference Include="SmartTech.Infrastructure.Configuration.AzureApp" Version="6.0.22328.7" />
+	<PackageReference Include="SmartTech.Infrastructure.Logging" Version="6.0.22328.7" />
+	<PackageReference Include="SmartTech.Infrastructure.ServiceBus" Version="6.0.22328.7" />
+	<PackageReference Include="SmartTech.Infrastructure.Storage.AzureStorage" Version="6.0.22328.7" />
+	<PackageReference Include="SmartTech.Infrastructure.Email.Sendgrid" Version="6.0.22328.7" />
+  </ItemGroup>
+  <ItemGroup>
+	<ProjectReference Include="..\Asf.Taxi.BusinessLogic\Asf.Taxi.BusinessLogic.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Update="host.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="local.settings.json">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+	</None>
+	<None Update="Properties\launchSettings.json">
+	  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	  <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+	</None>
+  </ItemGroup>
+</Project>

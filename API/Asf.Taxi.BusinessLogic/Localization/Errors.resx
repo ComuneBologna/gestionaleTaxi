@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlreadyAssociatedToOtherLicensee" xml:space="preserve">
+    <value>Già associato ad un altra licenza</value>
+  </data>
+  <data name="AlreadyAssociatedToOtherOwner" xml:space="preserve">
+    <value>Questa persona è già proprietaria di licenza attiva</value>
+  </data>
+  <data name="AttachmentContentIsMandatory" xml:space="preserve">
+    <value>Il contenuto del file è obbligatorio.</value>
+  </data>
+  <data name="Attachment_ContentIsMandatory" xml:space="preserve">
+    <value>Non è stato specificato nessun contenuto per l'allegato.</value>
+  </data>
+  <data name="CheckProtocolEmailStatusError" xml:space="preserve">
+    <value>Si è verificato un errore durante il processo di recupero dello stato della email.</value>
+  </data>
+  <data name="CredentialNotFound" xml:space="preserve">
+    <value>Non hai credenziali salvate</value>
+  </data>
+  <data name="DocumentNotGrouped" xml:space="preserve">
+    <value>Si è verificato un errore durante il processo diassociazione di un documento al documento capofila specificato.</value>
+  </data>
+  <data name="DocumentSignFailed" xml:space="preserve">
+    <value>Il documento non è stato firmato perché non è nello stato di firma necessaria.</value>
+  </data>
+  <data name="DocumentToSign" xml:space="preserve">
+    <value>Il documento non è stato ancora firmato.</value>
+  </data>
+  <data name="DriverAlreadyExists" xml:space="preserve">
+    <value>Il driver è già presente per la licenza specificata.</value>
+  </data>
+  <data name="ExternalAndFile" xml:space="preserve">
+    <value>Specificare o la risorsa esterna o lo stream dati</value>
+  </data>
+  <data name="ExternalFile" xml:space="preserve">
+    <value>Non è possibile recuperare file esterni</value>
+  </data>
+  <data name="FALicenseeNumTresholdExceeded" xml:space="preserve">
+    <value>Un tassista in gestione economica può essere associato a massimo n. {0} licenze attive</value>
+  </data>
+  <data name="FileIsMandatory" xml:space="preserve">
+    <value>È obbligatorio caricare un file .docx</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Specificare il nome file con la risorsa esterna</value>
+  </data>
+  <data name="FinancialAdministrationDriversMustBeTaxi" xml:space="preserve">
+    <value>Tutte le anagrafiche inserite devono far riferimento a persone fisiche</value>
+  </data>
+  <data name="FinancialAdministrationMustBeLegalPerson" xml:space="preserve">
+    <value>L'anagrafica della gestione economica deve essere una persona giuridica</value>
+  </data>
+  <data name="FinancialAdministrationNotAdded" xml:space="preserve">
+    <value>Non possono essere associate più gestioni economiche alla licenza</value>
+  </data>
+  <data name="FinancialAdministrationNotFound" xml:space="preserve">
+    <value>Gestione economica non trovata</value>
+  </data>
+  <data name="InChargeOfTheFolderNotReleased" xml:space="preserve">
+    <value>Si è verificato un errore durante il processo di rilascio di un documento.</value>
+  </data>
+  <data name="InvalidAttachmentExtension" xml:space="preserve">
+    <value>Il formato del file inserito non è valido. Sono ammessi solo file di tipo .docx.</value>
+  </data>
+  <data name="InvalidFiscalCodeOrVATNumber" xml:space="preserve">
+    <value>Codice Fiscale/Partita IVA non valido/a.</value>
+  </data>
+  <data name="InvalidIndividualCast" xml:space="preserve">
+    <value>Impossibile riconoscere la tipologia di individuo.</value>
+  </data>
+  <data name="InvalidInitialState" xml:space="preserve">
+    <value>La licenza può essere creata solo con i seguenti stati: '{0}', '{1}'</value>
+  </data>
+  <data name="InvalidLicenseeStateTransition" xml:space="preserve">
+    <value>Questa transazione di stato non è valida</value>
+  </data>
+  <data name="InvalidNccOwner" xml:space="preserve">
+    <value>Non è possibile aggiungere il proprietario in quanto lo è già della licenza {0}, bisogna attivare la gestione economica.</value>
+  </data>
+  <data name="InvalidRequestStatus" xml:space="preserve">
+    <value>Operazione non consentita per lo stato attuale della richiesta.</value>
+  </data>
+  <data name="InvalidSubShift" xml:space="preserve">
+    <value>Il sottoturno specificato non fa parte del turno selezionato.</value>
+  </data>
+  <data name="LegalPersonNotFound" xml:space="preserve">
+    <value>Individuo giuridico non trovato</value>
+  </data>
+  <data name="LicenseeAlredyExist" xml:space="preserve">
+    <value>Licenza già presente con stesso numero</value>
+  </data>
+  <data name="LicenseeControlVariation" xml:space="preserve">
+    <value>E' possibile fare solo variazioni di entità collegate ad una licenza (usare la funzione di edit)</value>
+  </data>
+  <data name="LicenseeFamilyCollaborationNumTresholdExceeded" xml:space="preserve">
+    <value>Può esserci massimo n. {0} collaboratori per licenza</value>
+  </data>
+  <data name="LicenseeInvalidStatus" xml:space="preserve">
+    <value>La licenza risulta terminata o sospesa</value>
+  </data>
+  <data name="LicenseeModifyStateError" xml:space="preserve">
+    <value>Non è possibile apportare modifiche ad un licenza cessata</value>
+  </data>
+  <data name="LicenseeNotFound" xml:space="preserve">
+    <value>Licenza non trovata</value>
+  </data>
+  <data name="LicenseesIssuingOfficeAlreadyExists" xml:space="preserve">
+    <value>Ente rilascio licenza già presente</value>
+  </data>
+  <data name="LicenseesIssuingOfficeNotFound" xml:space="preserve">
+    <value>Ente di rilascio non trovato.</value>
+  </data>
+  <data name="LicenseeUseStateError" xml:space="preserve">
+    <value>Non è possibile usare una licenza cessata</value>
+  </data>
+  <data name="MailNotValid" xml:space="preserve">
+    <value>Uno degli indirizzi email non è valido</value>
+  </data>
+  <data name="MultipleDriverError" xml:space="preserve">
+    <value>Questa licenza è associata a più di un guidatore</value>
+  </data>
+  <data name="MultipleLicenseeInvalidVariation" xml:space="preserve">
+    <value>Non posso variare entità associate a più licenze</value>
+  </data>
+  <data name="OnlyOneTypeOfPersonCanBeSpec" xml:space="preserve">
+    <value>Non è possibile specificare entrambi i tipi di persona fisica e legale</value>
+  </data>
+  <data name="OwnerLicenseeNumTresholdExceeded" xml:space="preserve">
+    <value>Un proprietario può avere massimo n. {0} licenze attive o sospese</value>
+  </data>
+  <data name="PersonConversion" xml:space="preserve">
+    <value>Non è possibile modificare una persona fisica in legale e viceversa</value>
+  </data>
+  <data name="PersonTypeNotValid" xml:space="preserve">
+    <value>Tipo di individuo non valido.</value>
+  </data>
+  <data name="ProcessNotStarted" xml:space="preserve">
+    <value>Si è verificato un errore durante il processo di avvio di un procedimento.</value>
+  </data>
+  <data name="ProcessNotStopped" xml:space="preserve">
+    <value>Si è verificato un errore durante il processo di chiusura di un procedimento.</value>
+  </data>
+  <data name="ProtocolEmailAlreadyExists" xml:space="preserve">
+    <value>Casella di posta già esistente.</value>
+  </data>
+  <data name="ProtocolEmailNotFound" xml:space="preserve">
+    <value>Casella di posta non trovata.</value>
+  </data>
+  <data name="ReleaseLicenseeShiftError" xml:space="preserve">
+    <value>Per rilasciare una licenza bisogna associare una tipoligia di turno</value>
+  </data>
+  <data name="RequestAlreadyExist" xml:space="preserve">
+    <value>La richiesta è già presente con stesso numero</value>
+  </data>
+  <data name="RequestNotDownloaded" xml:space="preserve">
+    <value>Si è verificato un errore durante il dowload del documento.</value>
+  </data>
+  <data name="RequestNotFound" xml:space="preserve">
+    <value>Richiesta non trovata.</value>
+  </data>
+  <data name="RequestNotProtocol" xml:space="preserve">
+    <value>Si è verificato un errore durante il processo di protocollazione del documento.</value>
+  </data>
+  <data name="RequestNotSigned" xml:space="preserve">
+    <value>Si è verificato un errore durante il processo di firma del documento.</value>
+  </data>
+  <data name="RequestNotUploaded" xml:space="preserve">
+    <value>Si è verificato un errore durante il caricamento del documento.</value>
+  </data>
+  <data name="RequestOTPNotSended" xml:space="preserve">
+    <value>Si è verificato un errore durante il processo di invio dell'OTP.</value>
+  </data>
+  <data name="RequestProtocolNotSent" xml:space="preserve">
+    <value>Si è verificato un errore durante il processo di invio del documento protocollato.</value>
+  </data>
+  <data name="RequestRollbackPermission" xml:space="preserve">
+    <value>Non puoi annullare la richiesta di firma di un altro operatore</value>
+  </data>
+  <data name="RequestRollbackSignNotRequired" xml:space="preserve">
+    <value>La richiesta non è nello stato di firma necessaria</value>
+  </data>
+  <data name="RequestRollbackSignSigned" xml:space="preserve">
+    <value>La richiesta è già stata firmata</value>
+  </data>
+  <data name="RequestsNotRetrieved" xml:space="preserve">
+    <value>Si è verificato un errore durante il recupero dei documenti.</value>
+  </data>
+  <data name="RestDayIsMandatoryForSpecialShift" xml:space="preserve">
+    <value>Per il turno {0} è necessario specificare un giorno di riposo.</value>
+  </data>
+  <data name="RoleNotFound" xml:space="preserve">
+    <value>Ruolo non trovato</value>
+  </data>
+  <data name="ShiftInUse" xml:space="preserve">
+    <value>Il turno è in uso su almeno una licenza.</value>
+  </data>
+  <data name="StartDateEndDateIsMandatory" xml:space="preserve">
+    <value>Specificare data inizio e fine</value>
+  </data>
+  <data name="StateAlredyExist" xml:space="preserve">
+    <value>Esiste già uno stato di questo tipo con questa descrizione</value>
+  </data>
+  <data name="SubShiftIsMandatory" xml:space="preserve">
+    <value>È obbligatorio specificare almeno un sottoturno.</value>
+  </data>
+  <data name="SubstituionDriverNotReplaceableActiveLicensee" xml:space="preserve">
+    <value>Il tassista scelto non può effettuare la sostituzione perché è in possesso di una licenza attiva</value>
+  </data>
+  <data name="SubstituionDriverNotReplaceableWithHimself" xml:space="preserve">
+    <value>Non è possibile sostituire un tassista con sé stesso</value>
+  </data>
+  <data name="SubstitutionAlreadyExists" xml:space="preserve">
+    <value>Esiste già una sostituzione in corso per la licenza indicata</value>
+  </data>
+  <data name="SubstitutionInvalidDateRange" xml:space="preserve">
+    <value>È già presente una sostituzione in questo range di date</value>
+  </data>
+  <data name="SubstitutionNCCLicensee" xml:space="preserve">
+    <value>Le licenze NCC non prevedono sostituzioni</value>
+  </data>
+  <data name="SubstitutionNotFound" xml:space="preserve">
+    <value>Sostituzione non trovata</value>
+  </data>
+  <data name="SubstitutionStatusIsInvalid" xml:space="preserve">
+    <value>È possibile esclusivamente cambiare lo stato di una sostituzione da "Terminato" a "Archiviato"</value>
+  </data>
+  <data name="SubstitutionTaxiDriverNotSelectable" xml:space="preserve">
+    <value>Il tassista selezionato è già associato ad una licenza.</value>
+  </data>
+  <data name="TaxiDriverAssociationAlredyExist" xml:space="preserve">
+    <value>Associazione di categoria già presente con stesso codice fiscale e nome</value>
+  </data>
+  <data name="TaxiDriverAssociationHaveLicensees" xml:space="preserve">
+    <value>L'associazione di categoria '{0}' è collegata ad una o più licenze</value>
+  </data>
+  <data name="TaxiDriverAssociationNotFound" xml:space="preserve">
+    <value>L'associazione di tassisti che si sta tentando di assegnare non esiste.</value>
+  </data>
+  <data name="TaxiDriverNotFound" xml:space="preserve">
+    <value>Tassista non trovato</value>
+  </data>
+  <data name="TaxiDriver_Add_ThresholdExceeded" xml:space="preserve">
+    <value>Non è possibile aggiungere il tassista perché è stato raggiunto il numero massimo di tassisti per il turno specificato nella licenza.</value>
+  </data>
+  <data name="TaxiDriver_SubShiftNotFound" xml:space="preserve">
+    <value>Non è possibile aggiungere un tassista fino a quando non viene assegnato un turno alla licenza.</value>
+  </data>
+  <data name="Template_TemplateNotFound" xml:space="preserve">
+    <value>Il documento non è stato trovato</value>
+  </data>
+  <data name="UserAlredyExist" xml:space="preserve">
+    <value>Esiste già un utente con '{0}' '{1}'.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>Utente non trovato.</value>
+  </data>
+  <data name="UseStateEditEndpoin" xml:space="preserve">
+    <value>Usare la funzione specifica per variare lo stato della licenza</value>
+  </data>
+  <data name="VehicleAlredyExist" xml:space="preserve">
+    <value>Il veicolo esiste già con questa targa</value>
+  </data>
+</root>

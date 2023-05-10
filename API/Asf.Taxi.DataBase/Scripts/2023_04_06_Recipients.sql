@@ -1,0 +1,1 @@
+﻿ALTER TABLE [Taxi].[Recipients] ADD [Order] TINYINT NULL

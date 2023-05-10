@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>f2e39e7f-3866-4db9-b003-db4230ee9595</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SmartTech.Common.API" Version="6.0.23095.1" />
+    <PackageReference Include="SmartTech.Common.Web.Security" Version="6.0.23095.1" />
+    <PackageReference Include="SmartTech.Infrastructure" Version="6.0.22328.7" />
+    <PackageReference Include="SmartTech.Infrastructure.API" Version="6.0.22328.7" />
+    <PackageReference Include="SmartTech.Infrastructure.Cache.Redis" Version="6.0.22328.7" />
+    <PackageReference Include="SmartTech.Infrastructure.Configuration.AzureApp" Version="6.0.22328.7" />
+    <PackageReference Include="SmartTech.Infrastructure.Logging" Version="6.0.22328.7" />
+    <PackageReference Include="SmartTech.Infrastructure.ServiceBus" Version="6.0.22328.7" />
+    <PackageReference Include="SmartTech.Infrastructure.Storage.AzureStorage" Version="6.0.22328.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Asf.Taxi.BusinessLogic\Asf.Taxi.BusinessLogic.csproj" />
+    <ProjectReference Include="..\Asf.Taxi.DAL\Asf.Taxi.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

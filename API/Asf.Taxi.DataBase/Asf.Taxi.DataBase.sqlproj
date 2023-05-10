@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Asf.Taxi.DataBase</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{a6e49d92-9fca-47cc-adaf-cb21eaca6014}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Asf.Taxi.DataBase</RootNamespace>
+    <AssemblyName>Asf.Taxi.DataBase</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Schemas" />
+    <Folder Include="Taxi" />
+    <Folder Include="Taxi\Tables" />
+    <Folder Include="Security" />
+    <Folder Include="Security\Tables" />
+    <Folder Include="Variation" />
+    <Folder Include="Variation\Tables" />
+    <Folder Include="Protocol" />
+    <Folder Include="Protocol\Tables" />
+    <Folder Include="Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schemas\Taxi.sql" />
+    <Build Include="Schemas\Security.sql" />
+    <Build Include="Taxi\Tables\Licensees.sql" />
+    <Build Include="Schemas\Protocol.sql" />
+    <Build Include="Taxi\Tables\Vehicles.sql" />
+    <Build Include="Taxi\Tables\SubShifts.sql" />
+    <Build Include="Taxi\Tables\CalendarShifts.sql" />
+    <Build Include="Security\Tables\Users.sql" />
+    <Build Include="Taxi\Tables\Audits.sql" />
+    <Build Include="Taxi\Tables\TaxiDriverAssociations.sql" />
+    <Build Include="Taxi\Tables\TaxiDriverSubstitutions.sql" />
+    <Build Include="Taxi\Tables\TaxiDrivers.sql" />
+    <Build Include="Schemas\Variation.sql" />
+    <Build Include="Variation\Tables\Licensees.sql" />
+    <Build Include="Taxi\Tables\Shifts.sql" />
+    <Build Include="Taxi\Tables\LicenseesIssuingOffices.sql" />
+    <Build Include="Taxi\Tables\Documents.sql" />
+    <Build Include="Taxi\Tables\FinancialAdministrations.sql" />
+    <Build Include="Taxi\Tables\LicenseesTaxiDrivers.sql" />
+    <Build Include="Taxi\Tables\Templates.sql" />
+    <Build Include="Taxi\Tables\RequestsRegisters.sql" />
+    <Build Include="Security\Tables\AuthoritiesForUsers.sql" />
+    <Build Include="Security\Tables\PermissionsForUsers.sql" />
+    <Build Include="Protocol\Tables\ProcessCodes.sql" />
+    <Build Include="Protocol\Tables\Emails.sql" />
+    <None Include="Scripts\2022_09_26_DigitalSignResult.sql" />
+    <None Include="Scripts\2022_11_09_LegalPeople.sql" />
+    <Build Include="Taxi\Tables\Recipients.sql" />
+    <Build Include="Taxi\Tables\Credentials.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asf.Taxi.DataBase.publish.xml" />
+    <None Include="Scripts\2022_11_08_SubstituionsStatus.sql" />
+    <None Include="Scripts\2023_04_03_RequestRegisters.sql" />
+    <None Include="Scripts\2023_04_06_Recipients.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Asf.Taxi.DataBase.refactorlog" />
+  </ItemGroup>
+</Project>

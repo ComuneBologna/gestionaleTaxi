@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>preview</LangVersion>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+	<PackageReference Include="SmartTech.Common" Version="6.0.23095.1" />
+	<PackageReference Include="SmartTech.Infrastructure" Version="6.0.22328.7" />
+	<PackageReference Include="Syncfusion.DocIO.Net.Core" Version="[18.4.0.30]" />
+	<PackageReference Include="Syncfusion.DocIORenderer.Net.Core" Version="[18.4.0.30]" />
+	<PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="[2.80.3]" />
+	<PackageReference Include="Syncfusion.Pdf.Net.Core" Version="[18.4.0.30]" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	<ProjectReference Include="..\Asf.Taxi.DAL\Asf.Taxi.DAL.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	<Compile Update="Localization\EnumDescriptions.Designer.cs">
+		<DesignTime>True</DesignTime>
+		<AutoGen>True</AutoGen>
+		<DependentUpon>EnumDescriptions.resx</DependentUpon>
+	</Compile>
+	<Compile Update="Localization\Errors.Designer.cs">
+		<DesignTime>True</DesignTime>
+		<AutoGen>True</AutoGen>
+		<DependentUpon>Errors.resx</DependentUpon>
+	</Compile>
+	<Compile Update="Localization\Resource.cs">
+		<DesignTime>True</DesignTime>
+		<AutoGen>True</AutoGen>
+		<DependentUpon>Resource.tt</DependentUpon>
+	</Compile>
+	<Compile Update="Localization\Resources.Designer.cs">
+		<DependentUpon>Resources.resx</DependentUpon>
+		<DesignTime>True</DesignTime>
+		<AutoGen>True</AutoGen>
+	</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	<EmbeddedResource Update="Localization\EnumDescriptions.resx">
+		<Generator>PublicResXFileCodeGenerator</Generator>
+		<LastGenOutput>EnumDescriptions.Designer.cs</LastGenOutput>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Localization\Errors.resx">
+		<Generator>PublicResXFileCodeGenerator</Generator>
+		<LastGenOutput>Errors.Designer.cs</LastGenOutput>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Localization\Resources.resx">
+		<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		<Generator>PublicResXFileCodeGenerator</Generator>
+	</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	<None Update="Localization\Resource.tt">
+		<Generator>TextTemplatingFileGenerator</Generator>
+		<LastGenOutput>Resource.cs</LastGenOutput>
+	</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+</Project>

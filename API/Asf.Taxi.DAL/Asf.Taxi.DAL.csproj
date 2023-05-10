@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>preview</LangVersion>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+	<PackageReference Include="SmartTech.Common.ApplicationUsers" Version="6.0.23095.1" />
+	<PackageReference Include="SmartTech.Infrastructure" Version="6.0.22328.7" />
+	<PackageReference Include="SmartTech.Infrastructure.DataAccessLayer.EFCore" Version="6.0.22328.7" />
+	</ItemGroup>
+
+</Project>

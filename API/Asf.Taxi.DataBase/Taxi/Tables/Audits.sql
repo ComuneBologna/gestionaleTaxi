@@ -1,0 +1,14 @@
+﻿CREATE TABLE [Taxi].[Audits]
+(
+	[Id] BIGINT IDENTITY (1, 1) NOT NULL,
+	[ItemId] BIGINT NOT NULL,
+	[ItemType] TINYINT NOT NULL,
+	[AuthorityId] BIGINT NOT NULL,
+	[UserId] UNIQUEIDENTIFIER NOT NULL,
+	[Username] VARCHAR(512) NOT NULL,
+	[CreatedAt] DATETIME NOT NULL,
+	[OperationType] TINYINT NOT NULL,
+	[OldItemPath] VARCHAR(1024) NULL,
+	[MemoLine] NVARCHAR(MAX) NULL,
+	CONSTRAINT [PK_Audits] PRIMARY KEY Clustered ([Id] ASC),
+)
