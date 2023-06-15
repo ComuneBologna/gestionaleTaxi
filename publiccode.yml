@@ -1,0 +1,91 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+applicationSuite: Azure
+categories:
+  - business-process-management
+  - digital-citizenship
+description:
+  it:
+    features:
+      - Anagrafica dei proprietari
+      - Gestione Licenze taxi ed NCC
+      - Gestione documentazione licenze
+      - Variazioni licenze
+      - Gestione turnazioni
+    genericName: Software Gestionale
+    longDescription: |
+      La piattaforma software applicativa consente la gestione delle licenze e
+      dei turni di servizio Taxi e NCC all’interno del proprio territorio
+      comunale, al fine di monitorare la copertura delle esigenze di trasporto
+      manifestate dai cittadini e pianificare in maniera più efficace le azioni
+      volte al miglioramento del servizio stesso. 
+
+
+
+      La piattaforma è in grado di organizzare le informazioni circa le licenze.
+      In particolare, organizza la documentazione che nel tempo viene prodotta,
+      assicurando conformità rispetto alla tenuta del documento informatico. In
+      fase di configurazione è possibile indicare i template dei documenti da
+      produrre, che tramite un editor dei testi l'operatore può modificare,
+      inoltre, tramite la gestione dei tag tutte le informazioni recuperate dal
+      sistema andranno a precompilare il documento. 
+
+      Il sistema prevede la gestione di un iter di firma, in questo modo un
+      operatore può inviare e notificare al documento i documenti da firmare. Il
+      dirigente ha a disposizione una sezione attraverso la quale poter firmare
+      la documentazione. 
+
+
+
+      Per ciascuna licenza, inoltre, vengono gestite le informazioni circa il
+      proprietario, le sostituzioni e la tipologia di veicolo utilizzato. Tutte
+      le informazioni vengono storicizzate così da garantire una completa
+      ricostruzione della storia di una licenza.
+
+      Il sistema gestisce l'anagrafica dei proprietari, delle associazioni di
+      categoria e degli enti di rilascio.  
+    shortDescription: |-
+      Il software consente di organizzare l'iter di gestione delle licenze Taxi
+      ed NCC
+developmentStatus: stable
+inputTypes:
+  - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+it:
+  conforme:
+    gdpr: false
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: false
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: false
+legal:
+  license: EUPL-1.2
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: true
+maintenance:
+  contacts:
+    - email: domenico.pedicini@asfweb.it
+      name: Domenico Pedicini
+    - email: dario.pedicini@asfweb.it
+      name: Dario Pedicini
+  contractors:
+    - name: asfweb
+      until: '2023-12-31'
+  type: contract
+name: Gestionale Taxi
+outputTypes:
+  - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+platforms:
+  - web
+releaseDate: '2023-04-21'
+softwareType: standalone/web
+url: 'https://github.com/ComuneBologna/gestionaleTaxi'
