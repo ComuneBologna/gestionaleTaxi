@@ -65,6 +65,8 @@ it:
     cie: false
     pagopa: false
     spid: false
+  riuso:
+    codiceIPA: c_a944
 legal:
   license: EUPL-1.2
 localisation:
@@ -78,7 +80,7 @@ maintenance:
     - email: dario.pedicini@asfweb.it
       name: Dario Pedicini
   contractors:
-    - name: asfweb
+    - name: Asfweb
       until: '2023-12-31'
   type: contract
 name: Gestionale Taxi
